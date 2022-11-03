@@ -1,0 +1,17 @@
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\bin\Debug\BTL-QLCuaHangBanQuanAo.exe.config
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\bin\Debug\BTL-QLCuaHangBanQuanAo.exe
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\bin\Debug\BTL-QLCuaHangBanQuanAo.pdb
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.AssemblyReference.cache
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.SuggestedBindingRedirects.cache
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.ResolveComReference.cache
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Form1.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Properties.Resources.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_KhachHang.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.GenerateResource.cache
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.CoreCompileInputs.cache
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.exe
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.pdb
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_BanHang.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_NhanVien.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_SanPham.resources
+D:\Programing Language\C sharp\BTL\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_HienThiMatHang.resources
