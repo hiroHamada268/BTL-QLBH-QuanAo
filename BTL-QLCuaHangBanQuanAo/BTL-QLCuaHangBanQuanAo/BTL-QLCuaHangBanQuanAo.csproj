@@ -76,6 +76,30 @@
     <Compile Include="Views\Form_BanHang.Designer.cs">
       <DependentUpon>Form_BanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_ChatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_ChatLieu.Designer.cs">
+      <DependentUpon>Form_ChatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Co.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Co.Designer.cs">
+      <DependentUpon>Form_Co.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_CongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_CongViec.Designer.cs">
+      <DependentUpon>Form_CongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_DoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_DoiTuong.Designer.cs">
+      <DependentUpon>Form_DoiTuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_HienThiMatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,17 +112,41 @@
     <Compile Include="Views\Form_KhachHang.Designer.cs">
       <DependentUpon>Form_KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_Mau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Mau.Designer.cs">
+      <DependentUpon>Form_Mau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_Mua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Mua.Designer.cs">
+      <DependentUpon>Form_Mua.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form_NhanVien.Designer.cs">
       <DependentUpon>Form_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_NoiSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_NoiSanXuat.Designer.cs">
+      <DependentUpon>Form_NoiSanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_SanPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Form_SanPham.Designer.cs">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Form_TheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_TheLoai.Designer.cs">
+      <DependentUpon>Form_TheLoai.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -116,17 +164,41 @@
     <EmbeddedResource Include="Views\Form_BanHang.resx">
       <DependentUpon>Form_BanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_ChatLieu.resx">
+      <DependentUpon>Form_ChatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Co.resx">
+      <DependentUpon>Form_Co.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_CongViec.resx">
+      <DependentUpon>Form_CongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_DoiTuong.resx">
+      <DependentUpon>Form_DoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_HienThiMatHang.resx">
       <DependentUpon>Form_HienThiMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_KhachHang.resx">
       <DependentUpon>Form_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Mau.resx">
+      <DependentUpon>Form_Mau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Mua.resx">
+      <DependentUpon>Form_Mua.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_NhanVien.resx">
       <DependentUpon>Form_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_NoiSanXuat.resx">
+      <DependentUpon>Form_NoiSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_SanPham.resx">
       <DependentUpon>Form_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_TheLoai.resx">
+      <DependentUpon>Form_TheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\BTL-QLCuaHangBanQuanAo.exe.config" />
     <None Include="Properties\Settings.settings">

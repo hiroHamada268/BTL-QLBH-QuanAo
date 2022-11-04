@@ -53,3 +53,11 @@ C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\
 C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.csproj.CoreCompileInputs.cache
 C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.exe
 C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL-QLCuaHangBanQuanAo.pdb
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_CongViec.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_Co.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_TheLoai.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_ChatLieu.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_Mau.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_DoiTuong.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_Mua.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_NoiSanXuat.resources

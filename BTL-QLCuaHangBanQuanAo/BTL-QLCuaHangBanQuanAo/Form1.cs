@@ -61,5 +61,45 @@ namespace BTL_QLCuaHangBanQuanAo
         {
 			LoadMutilForm(new Form_KhachHang());
         }
-    }
+
+		private void btnCongViec_Click(object sender, EventArgs e)
+		{
+			LoadMutilForm(new Form_CongViec());
+		}
+
+		private void btnTheLoai_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_TheLoai());
+        }
+
+		private void btnCo_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Co());
+        }
+		
+		private void btnChatLieu_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_ChatLieu());
+        }
+
+		private void btnMau_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Mau());
+        }
+
+		private void btnDoiTuong_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_DoiTuong());
+        }
+
+		private void btnMua_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Mua());
+        }
+
+		private void btnNoiSanXuat_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_NoiSanXuat());
+        }
+	}
 }
