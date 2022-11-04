@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,7 +17,8 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
          **/
         private string connectionStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + System.IO.Directory.GetCurrentDirectory().ToString() + "\\DataBase\\Data.mdf;Integrated Security=True";
         private static DataProvider instance;
-
+        public SqlCommand sqlCommand;
+        public SqlDataAdapter adapter;
         public DataProvider()
         {
         }
@@ -48,8 +50,8 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+               sqlCommand = new SqlCommand(query, connection);
+                adapter = new SqlDataAdapter(sqlCommand);
                 adapter.Fill(dtb);
 
                 connection.Close();
@@ -69,7 +71,22 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
+                sqlCommand = new SqlCommand(query, connection);
+                data = sqlCommand.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            return data;
+        }
+        public int ExecuteNonQuery(string query, byte[] Img)
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
+
+                sqlCommand = new SqlCommand(query, connection);
+                sqlCommand.Parameters.Add("@Img", SqlDbType.Image, Img.Length).Value = Img;
                 data = sqlCommand.ExecuteNonQuery();
 
                 connection.Close();
@@ -91,7 +108,7 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
+                sqlCommand = new SqlCommand(query, connection);
                 data = sqlCommand.ExecuteScalar();
 
                 connection.Close();
