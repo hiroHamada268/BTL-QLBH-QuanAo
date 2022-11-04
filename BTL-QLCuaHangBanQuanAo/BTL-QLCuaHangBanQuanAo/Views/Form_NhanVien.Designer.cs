@@ -92,7 +92,7 @@
             this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitle.Location = new System.Drawing.Point(0, 0);
             this.pnTitle.Name = "pnTitle";
-            this.pnTitle.Size = new System.Drawing.Size(1097, 84);
+            this.pnTitle.Size = new System.Drawing.Size(1097, 78);
             this.pnTitle.TabIndex = 1;
             // 
             // label2
@@ -108,9 +108,9 @@
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.splitter1.Location = new System.Drawing.Point(390, 84);
+            this.splitter1.Location = new System.Drawing.Point(390, 78);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(10, 552);
+            this.splitter1.Size = new System.Drawing.Size(10, 558);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
@@ -119,9 +119,9 @@
             this.panel1.Controls.Add(this.grbDanhSach);
             this.panel1.Controls.Add(this.grbTimKiem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(400, 84);
+            this.panel1.Location = new System.Drawing.Point(400, 78);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(697, 552);
+            this.panel1.Size = new System.Drawing.Size(697, 558);
             this.panel1.TabIndex = 4;
             // 
             // grbDanhSach
@@ -131,10 +131,10 @@
             this.grbDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbDanhSach.Location = new System.Drawing.Point(0, 105);
             this.grbDanhSach.Name = "grbDanhSach";
-            this.grbDanhSach.Size = new System.Drawing.Size(697, 447);
+            this.grbDanhSach.Size = new System.Drawing.Size(697, 453);
             this.grbDanhSach.TabIndex = 1;
             this.grbDanhSach.TabStop = false;
-            this.grbDanhSach.Text = "groupBox1";
+            this.grbDanhSach.Text = "Danh Sách Nhân Viên";
             // 
             // dgvNhanVien
             // 
@@ -146,7 +146,7 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(691, 418);
+            this.dgvNhanVien.Size = new System.Drawing.Size(691, 424);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
             // 
@@ -376,7 +376,7 @@
             this.pnCongCu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnCongCu.Location = new System.Drawing.Point(0, 339);
             this.pnCongCu.Name = "pnCongCu";
-            this.pnCongCu.Size = new System.Drawing.Size(390, 213);
+            this.pnCongCu.Size = new System.Drawing.Size(390, 219);
             this.pnCongCu.TabIndex = 2;
             // 
             // groupBox1
@@ -391,7 +391,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(390, 213);
+            this.groupBox1.Size = new System.Drawing.Size(390, 219);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Công Cụ";
@@ -500,9 +500,9 @@
             this.pnInput.Controls.Add(this.pnCongCu);
             this.pnInput.Controls.Add(this.grbThongTinNV);
             this.pnInput.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnInput.Location = new System.Drawing.Point(0, 84);
+            this.pnInput.Location = new System.Drawing.Point(0, 78);
             this.pnInput.Name = "pnInput";
-            this.pnInput.Size = new System.Drawing.Size(390, 552);
+            this.pnInput.Size = new System.Drawing.Size(390, 558);
             this.pnInput.TabIndex = 2;
             this.pnInput.Paint += new System.Windows.Forms.PaintEventHandler(this.pnInput_Paint);
             // 
