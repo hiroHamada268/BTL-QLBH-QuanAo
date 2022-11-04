@@ -73,6 +73,12 @@
     <Compile Include="Views\Form_KhachHang.Designer.cs">
       <DependentUpon>Form_KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_KhachHang.resx">
       <DependentUpon>Form_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_NhanVien.resx">
       <DependentUpon>Form_NhanVien.cs</DependentUpon>
@@ -170,6 +179,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mo-cua-hang-quan-ao-tre-em-o-que.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61a0439062b821.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
