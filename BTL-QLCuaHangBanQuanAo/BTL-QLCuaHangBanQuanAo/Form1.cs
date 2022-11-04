@@ -52,9 +52,14 @@ namespace BTL_QLCuaHangBanQuanAo
 			LoadMutilForm(new Form_NhanVien());
 		}
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+		private void pictureBox1_Click(object sender, EventArgs e)
         {
 			LoadMutilForm(new Form_HienThiMatHang());
 		}
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+			LoadMutilForm(new Form_KhachHang());
+        }
     }
 }
