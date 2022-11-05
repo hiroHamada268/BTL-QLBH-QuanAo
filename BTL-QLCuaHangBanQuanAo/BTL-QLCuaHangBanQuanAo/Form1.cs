@@ -38,12 +38,6 @@ namespace BTL_QLCuaHangBanQuanAo
         {
             InitializeComponent();
 
-			if (StaticData.datatable != null)
-			{
-				lblTenUser.Text = StaticData.datatable.Rows[0]["TenDangNhap"].ToString();
-                lblEmail.Text = StaticData.datatable.Rows[0]["Email"].ToString();
-                lblQuyen.Text = StaticData.datatable.Rows[0]["Quyen"].ToString();
-            }
 		}
 
         private void btnBanHang_Click(object sender, EventArgs e)
@@ -113,8 +107,8 @@ namespace BTL_QLCuaHangBanQuanAo
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
-		}
+            btnLoad_Click(sender, e);
+        }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
@@ -128,19 +122,59 @@ namespace BTL_QLCuaHangBanQuanAo
                     DataRow dataRow = dt.Rows[i];
 
                     Panel panel_FL = new Panel();
-                    panel_FL.Size = new Size(80, 200);
+                    panel_FL.Size = new Size(230, 200);
 
                     PictureBox pb = new PictureBox();
-                    pb.Size = new Size(80, 100);
-                    pb.Image = new Bitmap(dataRow[6].ToString());
+                    pb.Size = new Size(230, 160);
+                    pb.Image = new Bitmap(dataRow[3].ToString());
                     pb.SizeMode = PictureBoxSizeMode.StretchImage;
 
                     Label lbl = new Label();
                     lbl.Text = dataRow[1].ToString();
-                    lbl.Location = new System.Drawing.Point(58, 149);
+                    lbl.Location = new System.Drawing.Point(10, 180);
+                    lbl.AutoSize = true;
+                    lbl.Font = new Font("Calibri", 10);
 
                     panel_FL.Controls.Add(pb);
                     panel_FL.Controls.Add(lbl);
+                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
+
+                    flowLayoutPanel1.Controls.Add(panel_FL);
+                }
+            }
+        }
+
+        private void btnApDung_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            if (flowLayoutPanel1.Controls.Count == 0)
+            {
+                string search = txbSearch.Text;
+                string query = $"select * from SanPham where TenQuanAo like N'%{search}%' or MaQuanAo = N'{search}'";
+
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dataRow = dt.Rows[i];
+
+                    Panel panel_FL = new Panel();
+                    panel_FL.Size = new Size(230, 200);
+
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(230, 160);
+                    pb.Image = new Bitmap(dataRow[3].ToString());
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label lbl = new Label();
+                    lbl.Text = dataRow[1].ToString();
+                    lbl.Location = new System.Drawing.Point(10, 180);
+                    lbl.AutoSize = true;
+                    lbl.Font = new Font("Calibri", 10);
+
+                    panel_FL.Controls.Add(pb);
+                    panel_FL.Controls.Add(lbl);
+                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
 
                     flowLayoutPanel1.Controls.Add(panel_FL);
                 }

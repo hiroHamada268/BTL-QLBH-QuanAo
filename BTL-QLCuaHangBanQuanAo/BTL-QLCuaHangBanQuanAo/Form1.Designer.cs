@@ -48,7 +48,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelInfoTop = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblQuyen = new System.Windows.Forms.Label();
+            this.lblTenUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,13 +60,14 @@
             this.panelBoLoc = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnApDung = new System.Windows.Forms.Button();
+            this.cbTenCC = new System.Windows.Forms.ComboBox();
+            this.cbLoaiSP = new System.Windows.Forms.ComboBox();
+            this.txbSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,13 +78,8 @@
             this.panelRight = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelContentMain = new System.Windows.Forms.Panel();
-            this.lblTenUser = new System.Windows.Forms.Label();
-            this.lblQuyen = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLoad = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panelNavbar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -377,6 +377,36 @@
             this.panel13.Size = new System.Drawing.Size(1004, 67);
             this.panel13.TabIndex = 5;
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(395, 3);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(63, 25);
+            this.lblEmail.TabIndex = 6;
+            this.lblEmail.Text = "email";
+            // 
+            // lblQuyen
+            // 
+            this.lblQuyen.AutoSize = true;
+            this.lblQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuyen.Location = new System.Drawing.Point(95, 34);
+            this.lblQuyen.Name = "lblQuyen";
+            this.lblQuyen.Size = new System.Drawing.Size(75, 25);
+            this.lblQuyen.TabIndex = 5;
+            this.lblQuyen.Text = "Quyen";
+            // 
+            // lblTenUser
+            // 
+            this.lblTenUser.AutoSize = true;
+            this.lblTenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenUser.Location = new System.Drawing.Point(124, 4);
+            this.lblTenUser.Name = "lblTenUser";
+            this.lblTenUser.Size = new System.Drawing.Size(87, 25);
+            this.lblTenUser.TabIndex = 4;
+            this.lblTenUser.Text = "tenUser";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -386,6 +416,16 @@
             this.label3.Size = new System.Drawing.Size(71, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Xin Chao: ";
             // 
             // dateTimePicker1
             // 
@@ -449,16 +489,30 @@
             this.panel9.Controls.Add(this.label7);
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.button2);
-            this.panel9.Controls.Add(this.button1);
-            this.panel9.Controls.Add(this.comboBox2);
-            this.panel9.Controls.Add(this.comboBox1);
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.btnApDung);
+            this.panel9.Controls.Add(this.cbTenCC);
+            this.panel9.Controls.Add(this.cbLoaiSP);
+            this.panel9.Controls.Add(this.txbSearch);
             this.panel9.Controls.Add(this.label5);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 44);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1004, 109);
             this.panel9.TabIndex = 1;
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoad.Location = new System.Drawing.Point(886, 68);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(94, 35);
+            this.btnLoad.TabIndex = 9;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // label7
             // 
@@ -493,42 +547,43 @@
             this.button2.Text = "Làm Mới";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnApDung
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(13, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 35);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ap Dụng";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnApDung.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnApDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApDung.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnApDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApDung.Location = new System.Drawing.Point(13, 62);
+            this.btnApDung.Name = "btnApDung";
+            this.btnApDung.Size = new System.Drawing.Size(94, 35);
+            this.btnApDung.TabIndex = 3;
+            this.btnApDung.Text = "Ap Dụng";
+            this.btnApDung.UseVisualStyleBackColor = false;
+            this.btnApDung.Click += new System.EventHandler(this.btnApDung_Click);
             // 
-            // comboBox2
+            // cbTenCC
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(390, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 5;
+            this.cbTenCC.FormattingEnabled = true;
+            this.cbTenCC.Location = new System.Drawing.Point(390, 31);
+            this.cbTenCC.Name = "cbTenCC";
+            this.cbTenCC.Size = new System.Drawing.Size(121, 21);
+            this.cbTenCC.TabIndex = 5;
             // 
-            // comboBox1
+            // cbLoaiSP
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(237, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(113, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbLoaiSP.FormattingEnabled = true;
+            this.cbLoaiSP.Location = new System.Drawing.Point(237, 31);
+            this.cbLoaiSP.Name = "cbLoaiSP";
+            this.cbLoaiSP.Size = new System.Drawing.Size(113, 21);
+            this.cbLoaiSP.TabIndex = 4;
             // 
-            // textBox1
+            // txbSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 25);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(191, 31);
-            this.textBox1.TabIndex = 1;
+            this.txbSearch.Location = new System.Drawing.Point(16, 25);
+            this.txbSearch.Multiline = true;
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.Size = new System.Drawing.Size(191, 31);
+            this.txbSearch.TabIndex = 1;
             // 
             // label5
             // 
@@ -633,55 +688,6 @@
             this.panelContentMain.Size = new System.Drawing.Size(1006, 619);
             this.panelContentMain.TabIndex = 2;
             // 
-            // lblTenUser
-            // 
-            this.lblTenUser.AutoSize = true;
-            this.lblTenUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenUser.Location = new System.Drawing.Point(124, 4);
-            this.lblTenUser.Name = "lblTenUser";
-            this.lblTenUser.Size = new System.Drawing.Size(87, 25);
-            this.lblTenUser.TabIndex = 4;
-            this.lblTenUser.Text = "tenUser";
-            // 
-            // lblQuyen
-            // 
-            this.lblQuyen.AutoSize = true;
-            this.lblQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyen.Location = new System.Drawing.Point(95, 34);
-            this.lblQuyen.Name = "lblQuyen";
-            this.lblQuyen.Size = new System.Drawing.Size(75, 25);
-            this.lblQuyen.TabIndex = 5;
-            this.lblQuyen.Text = "Quyen";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(395, 3);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 25);
-            this.lblEmail.TabIndex = 6;
-            this.lblEmail.Text = "email";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Xin Chao: ";
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.splitter1.Location = new System.Drawing.Point(204, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(10, 733);
-            this.splitter1.TabIndex = 6;
-            this.splitter1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panelSanPham);
@@ -692,19 +698,14 @@
             this.panel1.Size = new System.Drawing.Size(1006, 464);
             this.panel1.TabIndex = 2;
             // 
-            // btnLoad
+            // splitter1
             // 
-            this.btnLoad.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLoad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoad.Location = new System.Drawing.Point(886, 68);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(94, 35);
-            this.btnLoad.TabIndex = 9;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = false;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.splitter1.Location = new System.Drawing.Point(204, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(10, 733);
+            this.splitter1.TabIndex = 6;
+            this.splitter1.TabStop = false;
             // 
             // Form1
             // 
@@ -763,10 +764,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnApDung;
+        private System.Windows.Forms.ComboBox cbTenCC;
+        private System.Windows.Forms.ComboBox cbLoaiSP;
+        private System.Windows.Forms.TextBox txbSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
