@@ -101,5 +101,10 @@ namespace BTL_QLCuaHangBanQuanAo
 		{
             LoadMutilForm(new Form_NoiSanXuat());
         }
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
