@@ -1,4 +1,5 @@
-﻿using BTL_QLCuaHangBanQuanAo.Model.Database;
+﻿using BTL_QLCuaHangBanQuanAo.Model.Class;
+using BTL_QLCuaHangBanQuanAo.Model.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,9 +68,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             string tenKhachHang = txbTenKhachHang.Text;
             string diaChi = txbDiaChi.Text;
             string soDienThoai = txbDienThoai.Text;
+            Valid valid = new Valid();
 
-            string strRegex = @"(^[0-9]{10}$)|(^\+[0-9]{2}\s+[0-9]{2}[0-9]{8}$)|(^[0-9]{3}-[0-9]{4}-[0-9]{4}$)";
-            Regex re = new Regex(strRegex);
             if (maKhachHang == "" || tenKhachHang == "" || diaChi == "" || soDienThoai == "")
             {
                 MessageBox.Show("Bạn cần nhập đầy đủ thông tin!");
@@ -78,7 +78,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 try
                 {
-                    if (re.IsMatch(soDienThoai))
+                    if (valid.IsPhone(soDienThoai))
                     {
                         string query = $@"
                             update KhachHang set 
@@ -109,9 +109,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             string tenKhachHang = txbTenKhachHang.Text;
             string diaChi = txbDiaChi.Text;
             string soDienThoai = txbDienThoai.Text;
+            Valid valid = new Valid();
 
-            string strRegex = @"(^[0-9]{10}$)|(^\+[0-9]{2}\s+[0-9]{2}[0-9]{8}$)|(^[0-9]{3}-[0-9]{4}-[0-9]{4}$)";
-            Regex re = new Regex(strRegex);
 
             if (maKhachHang == "" || tenKhachHang == "" || diaChi == "" || soDienThoai == "")
             {
@@ -130,7 +129,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                     }
                     else
                     {
-                        if (re.IsMatch(soDienThoai))
+                        if (valid.IsPhone(soDienThoai))
                         {
                             string query = $@"
                                 INSERT INTO KhachHang 

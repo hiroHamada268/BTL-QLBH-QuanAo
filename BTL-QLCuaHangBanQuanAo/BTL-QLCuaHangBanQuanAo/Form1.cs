@@ -1,4 +1,6 @@
-﻿using BTL_QLCuaHangBanQuanAo.Views;
+﻿using BTL_QLCuaHangBanQuanAo.Model.Class;
+using BTL_QLCuaHangBanQuanAo.Model.Database;
+using BTL_QLCuaHangBanQuanAo.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +19,7 @@ namespace BTL_QLCuaHangBanQuanAo
 
 		private void LoadMutilForm(Form form)
 		{
-			if(this.panelMain.Controls.Count > 0)
+			if (this.panelMain.Controls.Count > 0)
             {
 				this.panelMain.Controls.RemoveAt(0);
             }
@@ -35,7 +37,14 @@ namespace BTL_QLCuaHangBanQuanAo
 		public Form1()
         {
             InitializeComponent();
-        }
+
+			if (StaticData.datatable != null)
+			{
+				lblTenUser.Text = StaticData.datatable.Rows[0]["TenDangNhap"].ToString();
+                lblEmail.Text = StaticData.datatable.Rows[0]["Email"].ToString();
+                lblQuyen.Text = StaticData.datatable.Rows[0]["Quyen"].ToString();
+            }
+		}
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
@@ -106,5 +115,37 @@ namespace BTL_QLCuaHangBanQuanAo
 		{
 
 		}
-	}
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (flowLayoutPanel1.Controls.Count == 0)
+            {
+                string query = "select * from SanPham";
+                System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dataRow = dt.Rows[i];
+
+                    Panel panel_FL = new Panel();
+                    panel_FL.Size = new Size(80, 200);
+
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(80, 100);
+                    pb.Image = new Bitmap(dataRow[6].ToString());
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label lbl = new Label();
+                    lbl.Text = dataRow[1].ToString();
+                    lbl.Location = new System.Drawing.Point(58, 149);
+
+                    panel_FL.Controls.Add(pb);
+                    panel_FL.Controls.Add(lbl);
+
+                    flowLayoutPanel1.Controls.Add(panel_FL);
+                }
+
+            }
+        }
+    }
 }
