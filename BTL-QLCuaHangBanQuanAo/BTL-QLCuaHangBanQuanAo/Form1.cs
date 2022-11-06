@@ -1,4 +1,6 @@
-﻿using BTL_QLCuaHangBanQuanAo.Views;
+﻿using BTL_QLCuaHangBanQuanAo.Model.Class;
+using BTL_QLCuaHangBanQuanAo.Model.Database;
+using BTL_QLCuaHangBanQuanAo.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +19,7 @@ namespace BTL_QLCuaHangBanQuanAo
 
 		private void LoadMutilForm(Form form)
 		{
-			if(this.panelMain.Controls.Count > 0)
+			if (this.panelMain.Controls.Count > 0)
             {
 				this.panelMain.Controls.RemoveAt(0);
             }
@@ -35,7 +37,8 @@ namespace BTL_QLCuaHangBanQuanAo
 		public Form1()
         {
             InitializeComponent();
-        }
+
+		}
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
@@ -60,6 +63,123 @@ namespace BTL_QLCuaHangBanQuanAo
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
 			LoadMutilForm(new Form_KhachHang());
+        }
+
+		private void btnCongViec_Click(object sender, EventArgs e)
+		{
+			LoadMutilForm(new Form_CongViec());
+		}
+
+		private void btnTheLoai_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_TheLoai());
+        }
+
+		private void btnCo_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Co());
+        }
+		
+		private void btnChatLieu_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_ChatLieu());
+        }
+
+		private void btnMau_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Mau());
+        }
+
+		private void btnDoiTuong_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_DoiTuong());
+        }
+
+		private void btnMua_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_Mua());
+        }
+
+		private void btnNoiSanXuat_Click(object sender, EventArgs e)
+		{
+            LoadMutilForm(new Form_NoiSanXuat());
+        }
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+            btnLoad_Click(sender, e);
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (flowLayoutPanel1.Controls.Count == 0)
+            {
+                string query = "select * from SanPham";
+                System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dataRow = dt.Rows[i];
+
+                    Panel panel_FL = new Panel();
+                    panel_FL.Size = new Size(230, 200);
+
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(230, 160);
+                    pb.Image = new Bitmap(dataRow[3].ToString());
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label lbl = new Label();
+                    lbl.Text = dataRow[1].ToString();
+                    lbl.Location = new System.Drawing.Point(10, 180);
+                    lbl.AutoSize = true;
+                    lbl.Font = new Font("Calibri", 10);
+
+                    panel_FL.Controls.Add(pb);
+                    panel_FL.Controls.Add(lbl);
+                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
+
+                    flowLayoutPanel1.Controls.Add(panel_FL);
+                }
+            }
+        }
+
+        private void btnApDung_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+
+            if (flowLayoutPanel1.Controls.Count == 0)
+            {
+                string search = txbSearch.Text;
+                string query = $"select * from SanPham where TenQuanAo like N'%{search}%' or MaQuanAo = N'{search}'";
+
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dataRow = dt.Rows[i];
+
+                    Panel panel_FL = new Panel();
+                    panel_FL.Size = new Size(230, 200);
+
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(230, 160);
+                    pb.Image = new Bitmap(dataRow[3].ToString());
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                    Label lbl = new Label();
+                    lbl.Text = dataRow[1].ToString();
+                    lbl.Location = new System.Drawing.Point(10, 180);
+                    lbl.AutoSize = true;
+                    lbl.Font = new Font("Calibri", 10);
+
+                    panel_FL.Controls.Add(pb);
+                    panel_FL.Controls.Add(lbl);
+                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
+
+                    flowLayoutPanel1.Controls.Add(panel_FL);
+                }
+
+            }
         }
     }
 }

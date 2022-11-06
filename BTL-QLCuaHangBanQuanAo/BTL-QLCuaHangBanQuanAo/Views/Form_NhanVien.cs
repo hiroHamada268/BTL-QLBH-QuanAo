@@ -141,6 +141,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                     ctr.Text = "";
                 }
             }
+            LoadData();
         }
 
         private void txbSearch_TextChanged(object sender, EventArgs e)

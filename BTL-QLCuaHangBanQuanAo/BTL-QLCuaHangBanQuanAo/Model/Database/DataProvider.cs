@@ -15,7 +15,8 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
         /*
          *  Mieu ta: Đường dẫn kết nối đến cơ sở dữ liệu sqlserver 
          **/
-        private string connectionStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + System.IO.Directory.GetCurrentDirectory().ToString() + "\\DataBase\\Data.mdf;Integrated Security=True";
+        //private string connectionStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + System.IO.Directory.GetCurrentDirectory().ToString() + "\\DataBase\\Data.mdf;Integrated Security=True";
+        private string connectionStr = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=Winform_CuaHangQuanAo;Integrated Security=True";
         private static DataProvider instance;
         public SqlCommand sqlCommand;
         public SqlDataAdapter adapter;

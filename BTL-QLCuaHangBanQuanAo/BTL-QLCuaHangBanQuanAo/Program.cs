@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_QLCuaHangBanQuanAo.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace BTL_QLCuaHangBanQuanAo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            //Application.Run(new Form_Login());
         }
     }
 }
