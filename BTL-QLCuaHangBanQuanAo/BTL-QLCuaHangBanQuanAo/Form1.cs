@@ -186,5 +186,10 @@ namespace BTL_QLCuaHangBanQuanAo
         {
             LoadMutilForm(new Form_NhapHang());
         }
+
+        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        {
+            LoadMutilForm(new Form_NhaCungCap());
+        }
     }
 }

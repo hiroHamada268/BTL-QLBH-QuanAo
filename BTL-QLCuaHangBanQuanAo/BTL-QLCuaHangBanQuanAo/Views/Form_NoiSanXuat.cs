@@ -225,5 +225,10 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             txtMa.Text = dgvDanhSach.CurrentRow.Cells[0].Value.ToString();
             txtTen.Text = dgvDanhSach.CurrentRow.Cells[1].Value.ToString();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
