@@ -108,6 +108,52 @@ namespace BTL_QLCuaHangBanQuanAo
 		private void Form1_Load(object sender, EventArgs e)
 		{
             btnLoad_Click(sender, e);
+
+            if(StaticData.datatable != null)
+            {
+                lblTenUser.Text = StaticData.datatable.Rows[0]["TenDangNhap"].ToString();
+                lblEmail.Text = StaticData.datatable.Rows[0]["Email"].ToString();
+                lblQuyen.Text = StaticData.datatable.Rows[0]["Quyen"].ToString();
+            }
+        }
+
+        private void showProduct(DataTable dt)
+        {
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dataRow = dt.Rows[i];
+
+                Panel panel_FL = new Panel();
+                panel_FL.Size = new Size(230, 200);
+
+                PictureBox pb = new PictureBox();
+                pb.Size = new Size(230, 160);
+                pb.Image = new Bitmap(dataRow[3].ToString());
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+
+
+                Label lbl = new Label();
+                lbl.Text = dataRow[1].ToString();
+                lbl.Location = new System.Drawing.Point(10, 180);
+                lbl.AutoSize = true;
+                lbl.Font = new Font("Calibri", 10);
+
+                
+                pb.MouseClick += new MouseEventHandler((o, a) =>
+                {
+                    StaticData.dataTableSp = dataRow;
+                    Form_DetailSP dp = new Form_DetailSP();
+                    dp.ShowDialog();
+                    //StaticData.dataTableSp.Rows.Clear();
+
+                });
+
+                panel_FL.Controls.Add(pb);
+                panel_FL.Controls.Add(lbl);
+                panel_FL.BorderStyle = BorderStyle.FixedSingle;
+
+                flowLayoutPanel1.Controls.Add(panel_FL);
+            }
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -117,30 +163,7 @@ namespace BTL_QLCuaHangBanQuanAo
             {
                 string query = "select * from SanPham";
                 System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    DataRow dataRow = dt.Rows[i];
-
-                    Panel panel_FL = new Panel();
-                    panel_FL.Size = new Size(230, 200);
-
-                    PictureBox pb = new PictureBox();
-                    pb.Size = new Size(230, 160);
-                    pb.Image = new Bitmap(dataRow[3].ToString());
-                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                    Label lbl = new Label();
-                    lbl.Text = dataRow[1].ToString();
-                    lbl.Location = new System.Drawing.Point(10, 180);
-                    lbl.AutoSize = true;
-                    lbl.Font = new Font("Calibri", 10);
-
-                    panel_FL.Controls.Add(pb);
-                    panel_FL.Controls.Add(lbl);
-                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
-
-                    flowLayoutPanel1.Controls.Add(panel_FL);
-                }
+                showProduct(dt);
             }
         }
 
@@ -154,31 +177,7 @@ namespace BTL_QLCuaHangBanQuanAo
                 string query = $"select * from SanPham where TenQuanAo like N'%{search}%' or MaQuanAo = N'{search}'";
 
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    DataRow dataRow = dt.Rows[i];
-
-                    Panel panel_FL = new Panel();
-                    panel_FL.Size = new Size(230, 200);
-
-                    PictureBox pb = new PictureBox();
-                    pb.Size = new Size(230, 160);
-                    pb.Image = new Bitmap(dataRow[3].ToString());
-                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                    Label lbl = new Label();
-                    lbl.Text = dataRow[1].ToString();
-                    lbl.Location = new System.Drawing.Point(10, 180);
-                    lbl.AutoSize = true;
-                    lbl.Font = new Font("Calibri", 10);
-
-                    panel_FL.Controls.Add(pb);
-                    panel_FL.Controls.Add(lbl);
-                    panel_FL.BorderStyle = BorderStyle.FixedSingle;
-
-                    flowLayoutPanel1.Controls.Add(panel_FL);
-                }
-
+                showProduct(dt);
             }
         }
     }
