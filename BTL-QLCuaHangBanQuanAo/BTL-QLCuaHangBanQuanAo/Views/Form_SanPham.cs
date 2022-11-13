@@ -16,7 +16,6 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 {
     public partial class Form_SanPham : Form
     {
-        //string connectionStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + System.IO.Directory.GetCurrentDirectory().ToString() + "\\DataBase\\Data.mdf;Integrated Security=True";
         string MaQA = "";
         DataProvider sqlConnect = new DataProvider();
         string img = "";
