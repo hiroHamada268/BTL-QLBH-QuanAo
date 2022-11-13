@@ -174,7 +174,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                     MemoryStream ms = new MemoryStream(bytes);
                     PicSanPham.Image = Image.FromStream(ms);
                 }
-                catch
+                catch   
                 {
 
                 }

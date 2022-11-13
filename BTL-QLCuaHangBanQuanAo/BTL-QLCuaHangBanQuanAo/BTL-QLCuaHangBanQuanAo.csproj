@@ -164,6 +164,12 @@
     <Compile Include="Views\Form_TheLoai.Designer.cs">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PopUp.Designer.cs">
+      <DependentUpon>PopUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_TheLoai.resx">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PopUp.resx">
+      <DependentUpon>PopUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\BTL-QLCuaHangBanQuanAo.exe.config" />
     <None Include="Properties\Settings.settings">
