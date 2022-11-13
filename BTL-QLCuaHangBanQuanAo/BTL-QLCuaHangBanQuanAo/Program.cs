@@ -17,8 +17,8 @@ namespace BTL_QLCuaHangBanQuanAo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            //Application.Run(new Form_Login());
+            //Application.Run(new Form1());
+            Application.Run(new Form_Login());
         }
     }
 }

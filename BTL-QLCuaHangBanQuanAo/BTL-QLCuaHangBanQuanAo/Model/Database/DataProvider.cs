@@ -107,7 +107,7 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection())
+            using (SqlConnection connection = new SqlConnection(connectionStr))
             {
                 connection.Open();
 

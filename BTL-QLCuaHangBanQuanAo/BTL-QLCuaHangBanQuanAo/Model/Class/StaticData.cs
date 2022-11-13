@@ -10,5 +10,9 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Class
     internal class StaticData
     {
         public static DataTable datatable;
+
+        public static DataRow dataRowSp;
+
+        public static DataRow dataRowSpMua;
     }
 }
