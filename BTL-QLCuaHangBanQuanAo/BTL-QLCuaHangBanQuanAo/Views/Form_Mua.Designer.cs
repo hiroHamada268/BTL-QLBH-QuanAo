@@ -52,6 +52,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pnTitle.SuspendLayout();
             this.pnInput.SuspendLayout();
             this.grbCongCu.SuspendLayout();
@@ -359,7 +360,7 @@
             this.Controls.Add(this.pnInput);
             this.Controls.Add(this.pnTitle);
             this.Name = "Form_Mua";
-            this.Text = "Form_CongViec";
+            this.Text = "Form_Mua";
             this.Load += new System.EventHandler(this.Form_Mua_Load);
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
@@ -401,5 +402,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

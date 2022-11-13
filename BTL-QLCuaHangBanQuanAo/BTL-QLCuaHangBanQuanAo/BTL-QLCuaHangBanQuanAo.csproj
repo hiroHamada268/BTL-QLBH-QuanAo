@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -140,6 +140,12 @@
     <Compile Include="Views\Form_Mua.Designer.cs">
       <DependentUpon>Form_Mua.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_NhaCungCap.Designer.cs">
+      <DependentUpon>Form_NhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,12 +175,6 @@
     </Compile>
     <Compile Include="Views\Form_TheLoai.Designer.cs">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PopUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\PopUp.Designer.cs">
-      <DependentUpon>PopUp.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Views\Form_Mua.resx">
       <DependentUpon>Form_Mua.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_NhaCungCap.resx">
+      <DependentUpon>Form_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_NhanVien.resx">
       <DependentUpon>Form_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -236,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_TheLoai.resx">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\PopUp.resx">
-      <DependentUpon>PopUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\BTL-QLCuaHangBanQuanAo.exe.config" />
     <None Include="Properties\Settings.settings">

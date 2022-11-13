@@ -39,7 +39,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             OldTien = 0;
             listMaQA.Clear();
             table.Rows.Clear();
-            txtMaHD.Text = data.ExecuteFunction("SinhMaHDB");
+            //txtMaHD.Text = data.ExecuteFunction("SinhMaHDB");
+            txtMaHD.Text = data.SinhMaHDB();
             string qr = $"select distinct MaNV from NhanVien";
             data.FillCBO(qr, cboMaNV, "MaNV");
             qr = $"select distinct MaKhach from KhachHang";
@@ -274,6 +275,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             }
 
             StartPr();
+        }
+
+        private void btnThemnhom_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
