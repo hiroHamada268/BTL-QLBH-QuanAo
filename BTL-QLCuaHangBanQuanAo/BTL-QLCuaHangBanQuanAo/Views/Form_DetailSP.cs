@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,9 +25,15 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             if(StaticData.dataRowSp != null)
             {
-                pictureBox1.Image = new Bitmap(StaticData.dataRowSp["Anh"].ToString());
+                //pictureBox1.Image = new Bitmap(StaticData.dataRowSp["Anh"].ToString());
 
-                if(int.Parse(StaticData.dataRowSp["SoLuong"].ToString()) > 0)
+                string path = @"asset\ImgBTL" + $@"\{StaticData.dataRowSp["Anh"]}";
+                pictureBox1.Image = Image.FromFile(
+                  Path.Combine(
+                     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                     path));
+
+                if (int.Parse(StaticData.dataRowSp["SoLuong"].ToString()) > 0)
                 {
                     lblTrangThai.Text = "Còn Hàng";
                 }
