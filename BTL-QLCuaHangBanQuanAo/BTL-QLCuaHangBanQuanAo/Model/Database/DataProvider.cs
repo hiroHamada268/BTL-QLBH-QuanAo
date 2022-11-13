@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -6,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace BTL_QLCuaHangBanQuanAo.Model.Database
 {
@@ -15,9 +18,10 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
          *  Mieu ta: Đường dẫn kết nối đến cơ sở dữ liệu sqlserver 
          **/
         //private string connectionStr = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + System.IO.Directory.GetCurrentDirectory().ToString() + "\\DataBase\\Data.mdf;Integrated Security=True";
-        private string connectionStr = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=Winform_CuaHangQuanAo;Integrated Security=True";
+        private readonly string connectionStr = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=Winform_CuaHangQuanAo;Integrated Security=True";
         private static DataProvider instance;
-
+        public SqlCommand sqlCommand;
+        public SqlDataAdapter adapter;
         public DataProvider()
         {
         }
@@ -49,8 +53,8 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+                sqlCommand = new SqlCommand(query, connection);
+                adapter = new SqlDataAdapter(sqlCommand);
                 adapter.Fill(dtb);
 
                 connection.Close();
@@ -70,7 +74,22 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
+                sqlCommand = new SqlCommand(query, connection);
+                data = sqlCommand.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            return data;
+        }
+        public int ExecuteNonQuery(string query, byte[] Img)
+        {
+            int data = 0;
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
+
+                sqlCommand = new SqlCommand(query, connection);
+                sqlCommand.Parameters.Add("@Img", SqlDbType.Image, Img.Length).Value = Img;
                 data = sqlCommand.ExecuteNonQuery();
 
                 connection.Close();
@@ -92,13 +111,37 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             {
                 connection.Open();
 
-                SqlCommand sqlCommand = new SqlCommand(query, connection);
+                sqlCommand = new SqlCommand(query, connection);
                 data = sqlCommand.ExecuteScalar();
 
                 connection.Close();
 
             }
             return data;
+        }
+
+        public void FillCBO(string sql, ComboBox cbo, string name)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
+                DataTable table = ExecuteQuery(sql);
+                cbo.DataSource = table;
+                cbo.ValueMember = name;
+                cbo.SelectedIndex = -1;
+            }
+        }
+
+        public void FillTxt(string sql, TextBox Txt,string s)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+               
+                connection.Open();
+                DataTable table = ExecuteQuery(sql);
+                DataRow data = table.Rows[0];
+                Txt.Text = data[s].ToString();
+            }
         }
 
         /*

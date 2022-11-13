@@ -47,27 +47,27 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelInfoTop = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblQuyen = new System.Windows.Forms.Label();
             this.lblTenUser = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lblTieuDe = new System.Windows.Forms.Label();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblQuyen = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panelNavbar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelInfoTop.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelRight.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNavbar
@@ -77,7 +77,7 @@
             this.panelNavbar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavbar.Location = new System.Drawing.Point(0, 0);
             this.panelNavbar.Name = "panelNavbar";
-            this.panelNavbar.Size = new System.Drawing.Size(204, 868);
+            this.panelNavbar.Size = new System.Drawing.Size(228, 682);
             this.panelNavbar.TabIndex = 3;
             // 
             // panel3
@@ -99,20 +99,21 @@
             this.panel3.Controls.Add(this.btnSp);
             this.panel3.Controls.Add(this.btnBanHang);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 147);
+            this.panel3.Location = new System.Drawing.Point(0, 173);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(204, 721);
+            this.panel3.Size = new System.Drawing.Size(228, 509);
             this.panel3.TabIndex = 1;
             // 
             // btnNoiSanXuat
             // 
             this.btnNoiSanXuat.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNoiSanXuat.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNoiSanXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNoiSanXuat.ForeColor = System.Drawing.SystemColors.Window;
             this.btnNoiSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNoiSanXuat.Location = new System.Drawing.Point(2, 868);
+            this.btnNoiSanXuat.Location = new System.Drawing.Point(0, 767);
             this.btnNoiSanXuat.Name = "btnNoiSanXuat";
-            this.btnNoiSanXuat.Size = new System.Drawing.Size(176, 59);
+            this.btnNoiSanXuat.Size = new System.Drawing.Size(209, 59);
             this.btnNoiSanXuat.TabIndex = 3;
             this.btnNoiSanXuat.Text = "Nơi Sản Xuất";
             this.btnNoiSanXuat.UseVisualStyleBackColor = false;
@@ -121,12 +122,13 @@
             // btnMua
             // 
             this.btnMua.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnMua.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMua.ForeColor = System.Drawing.SystemColors.Window;
             this.btnMua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMua.Location = new System.Drawing.Point(2, 802);
+            this.btnMua.Location = new System.Drawing.Point(0, 708);
             this.btnMua.Name = "btnMua";
-            this.btnMua.Size = new System.Drawing.Size(176, 59);
+            this.btnMua.Size = new System.Drawing.Size(209, 59);
             this.btnMua.TabIndex = 3;
             this.btnMua.Text = "Mùa";
             this.btnMua.UseVisualStyleBackColor = false;
@@ -135,12 +137,13 @@
             // btnDoiTuong
             // 
             this.btnDoiTuong.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDoiTuong.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDoiTuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiTuong.ForeColor = System.Drawing.SystemColors.Window;
             this.btnDoiTuong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiTuong.Location = new System.Drawing.Point(2, 736);
+            this.btnDoiTuong.Location = new System.Drawing.Point(0, 649);
             this.btnDoiTuong.Name = "btnDoiTuong";
-            this.btnDoiTuong.Size = new System.Drawing.Size(176, 59);
+            this.btnDoiTuong.Size = new System.Drawing.Size(209, 59);
             this.btnDoiTuong.TabIndex = 3;
             this.btnDoiTuong.Text = "Đối Tượng";
             this.btnDoiTuong.UseVisualStyleBackColor = false;
@@ -149,12 +152,13 @@
             // btnMau
             // 
             this.btnMau.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnMau.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMau.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMau.ForeColor = System.Drawing.SystemColors.Window;
             this.btnMau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMau.Location = new System.Drawing.Point(3, 670);
+            this.btnMau.Location = new System.Drawing.Point(0, 590);
             this.btnMau.Name = "btnMau";
-            this.btnMau.Size = new System.Drawing.Size(176, 59);
+            this.btnMau.Size = new System.Drawing.Size(209, 59);
             this.btnMau.TabIndex = 3;
             this.btnMau.Text = "Màu";
             this.btnMau.UseVisualStyleBackColor = false;
@@ -163,12 +167,13 @@
             // btnChatLieu
             // 
             this.btnChatLieu.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnChatLieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChatLieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChatLieu.ForeColor = System.Drawing.SystemColors.Window;
             this.btnChatLieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChatLieu.Location = new System.Drawing.Point(3, 604);
+            this.btnChatLieu.Location = new System.Drawing.Point(0, 531);
             this.btnChatLieu.Name = "btnChatLieu";
-            this.btnChatLieu.Size = new System.Drawing.Size(176, 59);
+            this.btnChatLieu.Size = new System.Drawing.Size(209, 59);
             this.btnChatLieu.TabIndex = 3;
             this.btnChatLieu.Text = "Chất Liệu";
             this.btnChatLieu.UseVisualStyleBackColor = false;
@@ -177,12 +182,13 @@
             // btnCo
             // 
             this.btnCo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCo.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCo.Location = new System.Drawing.Point(5, 539);
+            this.btnCo.Location = new System.Drawing.Point(0, 472);
             this.btnCo.Name = "btnCo";
-            this.btnCo.Size = new System.Drawing.Size(176, 59);
+            this.btnCo.Size = new System.Drawing.Size(209, 59);
             this.btnCo.TabIndex = 3;
             this.btnCo.Text = "Cỡ";
             this.btnCo.UseVisualStyleBackColor = false;
@@ -191,12 +197,13 @@
             // btnTheLoai
             // 
             this.btnTheLoai.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnTheLoai.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTheLoai.ForeColor = System.Drawing.SystemColors.Window;
             this.btnTheLoai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTheLoai.Location = new System.Drawing.Point(4, 473);
+            this.btnTheLoai.Location = new System.Drawing.Point(0, 413);
             this.btnTheLoai.Name = "btnTheLoai";
-            this.btnTheLoai.Size = new System.Drawing.Size(176, 59);
+            this.btnTheLoai.Size = new System.Drawing.Size(209, 59);
             this.btnTheLoai.TabIndex = 3;
             this.btnTheLoai.Text = "Thể Loại";
             this.btnTheLoai.UseVisualStyleBackColor = false;
@@ -205,12 +212,13 @@
             // btnCongViec
             // 
             this.btnCongViec.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnCongViec.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCongViec.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCongViec.ForeColor = System.Drawing.SystemColors.Window;
             this.btnCongViec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongViec.Location = new System.Drawing.Point(4, 407);
+            this.btnCongViec.Location = new System.Drawing.Point(0, 354);
             this.btnCongViec.Name = "btnCongViec";
-            this.btnCongViec.Size = new System.Drawing.Size(176, 59);
+            this.btnCongViec.Size = new System.Drawing.Size(209, 59);
             this.btnCongViec.TabIndex = 3;
             this.btnCongViec.Text = "Công Việc";
             this.btnCongViec.UseVisualStyleBackColor = false;
@@ -219,12 +227,13 @@
             // btnNhaCungCap
             // 
             this.btnNhaCungCap.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhaCungCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhaCungCap.ForeColor = System.Drawing.SystemColors.Window;
             this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(5, 334);
+            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 295);
             this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Size = new System.Drawing.Size(176, 59);
+            this.btnNhaCungCap.Size = new System.Drawing.Size(209, 59);
             this.btnNhaCungCap.TabIndex = 3;
             this.btnNhaCungCap.Text = "Nhà Cung Cấp";
             this.btnNhaCungCap.UseVisualStyleBackColor = false;
@@ -232,26 +241,27 @@
             // btnNhapHang
             // 
             this.btnNhapHang.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNhapHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhapHang.ForeColor = System.Drawing.SystemColors.Window;
             this.btnNhapHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhapHang.Location = new System.Drawing.Point(5, 268);
+            this.btnNhapHang.Location = new System.Drawing.Point(0, 236);
             this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Size = new System.Drawing.Size(176, 59);
+            this.btnNhapHang.Size = new System.Drawing.Size(209, 59);
             this.btnNhapHang.TabIndex = 3;
             this.btnNhapHang.Text = "Nhập Hàng";
             this.btnNhapHang.UseVisualStyleBackColor = false;
-            this.btnNhapHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             // 
             // btnKhachHang
             // 
             this.btnKhachHang.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.SystemColors.Window;
             this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(4, 202);
+            this.btnKhachHang.Location = new System.Drawing.Point(0, 177);
             this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Size = new System.Drawing.Size(176, 59);
+            this.btnKhachHang.Size = new System.Drawing.Size(209, 59);
             this.btnKhachHang.TabIndex = 3;
             this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.UseVisualStyleBackColor = false;
@@ -260,12 +270,13 @@
             // btnNhanVien
             // 
             this.btnNhanVien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.SystemColors.Window;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(3, 137);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 118);
             this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(176, 59);
+            this.btnNhanVien.Size = new System.Drawing.Size(209, 59);
             this.btnNhanVien.TabIndex = 2;
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.UseVisualStyleBackColor = false;
@@ -274,12 +285,13 @@
             // btnSp
             // 
             this.btnSp.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSp.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSp.ForeColor = System.Drawing.SystemColors.Window;
             this.btnSp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSp.Location = new System.Drawing.Point(3, 72);
+            this.btnSp.Location = new System.Drawing.Point(0, 59);
             this.btnSp.Name = "btnSp";
-            this.btnSp.Size = new System.Drawing.Size(176, 59);
+            this.btnSp.Size = new System.Drawing.Size(209, 59);
             this.btnSp.TabIndex = 1;
             this.btnSp.Text = "Sản Phẩm";
             this.btnSp.UseVisualStyleBackColor = false;
@@ -288,12 +300,13 @@
             // btnBanHang
             // 
             this.btnBanHang.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBanHang.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanHang.ForeColor = System.Drawing.SystemColors.Window;
             this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanHang.Location = new System.Drawing.Point(3, 7);
+            this.btnBanHang.Location = new System.Drawing.Point(0, 0);
             this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Size = new System.Drawing.Size(176, 59);
+            this.btnBanHang.Size = new System.Drawing.Size(209, 59);
             this.btnBanHang.TabIndex = 0;
             this.btnBanHang.Text = "Bán Hang";
             this.btnBanHang.UseVisualStyleBackColor = false;
@@ -305,7 +318,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(204, 147);
+            this.panel2.Size = new System.Drawing.Size(228, 173);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -314,7 +327,7 @@
             this.pictureBox1.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.mo_cua_hang_quan_ao_tre_em_o_que;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 147);
+            this.pictureBox1.Size = new System.Drawing.Size(228, 173);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -330,23 +343,8 @@
             this.panelInfoTop.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.panelInfoTop.Location = new System.Drawing.Point(0, 0);
             this.panelInfoTop.Name = "panelInfoTop";
-            this.panelInfoTop.Size = new System.Drawing.Size(1110, 114);
+            this.panelInfoTop.Size = new System.Drawing.Size(982, 119);
             this.panelInfoTop.TabIndex = 4;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.lblEmail);
-            this.panel13.Controls.Add(this.lblQuyen);
-            this.panel13.Controls.Add(this.lblTenUser);
-            this.panel13.Controls.Add(this.label3);
-            this.panel13.Controls.Add(this.label1);
-            this.panel13.Controls.Add(this.dateTimePicker1);
-            this.panel13.Controls.Add(this.label2);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 45);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1108, 67);
-            this.panel13.TabIndex = 5;
             // 
             // lblEmail
             // 
@@ -357,16 +355,6 @@
             this.lblEmail.Size = new System.Drawing.Size(63, 25);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "email";
-            // 
-            // lblQuyen
-            // 
-            this.lblQuyen.AutoSize = true;
-            this.lblQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyen.Location = new System.Drawing.Point(95, 34);
-            this.lblQuyen.Name = "lblQuyen";
-            this.lblQuyen.Size = new System.Drawing.Size(75, 25);
-            this.lblQuyen.TabIndex = 5;
-            this.lblQuyen.Text = "Quyen";
             // 
             // lblTenUser
             // 
@@ -400,21 +388,12 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(706, 6);
+            this.dateTimePicker1.Location = new System.Drawing.Point(614, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(350, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(355, 31);
             this.dateTimePicker1.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Quyền:";
             // 
             // panel5
             // 
@@ -423,7 +402,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1108, 45);
+            this.panel5.Size = new System.Drawing.Size(980, 49);
             this.panel5.TabIndex = 4;
             // 
             // lblTieuDe
@@ -437,36 +416,73 @@
             // 
             // panelRight
             // 
+            this.panelRight.AutoScroll = true;
             this.panelRight.Controls.Add(this.panelMain);
             this.panelRight.Controls.Add(this.panelInfoTop);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(204, 0);
+            this.panelRight.Location = new System.Drawing.Point(228, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(1110, 868);
+            this.panelRight.Size = new System.Drawing.Size(982, 682);
             this.panelRight.TabIndex = 5;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.splitter1.Location = new System.Drawing.Point(204, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(10, 868);
-            this.splitter1.TabIndex = 6;
-            this.splitter1.TabStop = false;
             // 
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 114);
+            this.panelMain.Location = new System.Drawing.Point(0, 119);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1110, 754);
+            this.panelMain.Size = new System.Drawing.Size(982, 563);
             this.panelMain.TabIndex = 5;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.splitter1.Location = new System.Drawing.Point(228, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(10, 682);
+            this.splitter1.TabIndex = 6;
+            this.splitter1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Quyền:";
+            // 
+            // lblQuyen
+            // 
+            this.lblQuyen.AutoSize = true;
+            this.lblQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuyen.Location = new System.Drawing.Point(95, 34);
+            this.lblQuyen.Name = "lblQuyen";
+            this.lblQuyen.Size = new System.Drawing.Size(75, 25);
+            this.lblQuyen.TabIndex = 5;
+            this.lblQuyen.Text = "Quyen";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.lblEmail);
+            this.panel13.Controls.Add(this.lblQuyen);
+            this.panel13.Controls.Add(this.dateTimePicker1);
+            this.panel13.Controls.Add(this.lblTenUser);
+            this.panel13.Controls.Add(this.label3);
+            this.panel13.Controls.Add(this.label1);
+            this.panel13.Controls.Add(this.label2);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 49);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(980, 93);
+            this.panel13.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1314, 868);
+            this.ClientSize = new System.Drawing.Size(1210, 682);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelNavbar);
@@ -478,11 +494,11 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelInfoTop.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panelRight.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -496,10 +512,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelInfoTop;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lblTieuDe;
         private System.Windows.Forms.Panel panelRight;
@@ -515,11 +529,13 @@
         private System.Windows.Forms.Button btnNhaCungCap;
         private System.Windows.Forms.Button btnNhapHang;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblQuyen;
         private System.Windows.Forms.Label lblTenUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label lblQuyen;
+        private System.Windows.Forms.Label label2;
     }
 }
 

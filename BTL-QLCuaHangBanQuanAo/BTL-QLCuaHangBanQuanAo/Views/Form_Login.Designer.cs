@@ -85,10 +85,10 @@
             this.btnLogin.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(223, 212);
+            this.btnLogin.Location = new System.Drawing.Point(140, 206);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(74, 39);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -96,28 +96,32 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(122, 212);
+            this.btnCancel.Location = new System.Drawing.Point(220, 206);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(78, 39);
-            this.btnCancel.TabIndex = 5;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txbPassword
             // 
+            this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPassword.Location = new System.Drawing.Point(37, 159);
             this.txbPassword.Multiline = true;
             this.txbPassword.Name = "txbPassword";
+            this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(261, 32);
-            this.txbPassword.TabIndex = 4;
+            this.txbPassword.TabIndex = 1;
             // 
             // txbEmail
             // 
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.Location = new System.Drawing.Point(36, 93);
             this.txbEmail.Multiline = true;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(261, 32);
-            this.txbEmail.TabIndex = 3;
+            this.txbEmail.TabIndex = 0;
             // 
             // label2
             // 

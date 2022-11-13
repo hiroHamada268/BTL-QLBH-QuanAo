@@ -35,6 +35,10 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             showMatHangDaMua();
 
             showPrice();
+
+            showLoaiSp();
+
+            showNhaCungCap();
         }
 
         private void showPrice()
@@ -172,11 +176,25 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         private void btnApDung_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
-
+            string query;
             if (flowLayoutPanel1.Controls.Count == 0)
             {
+
                 string search = txbSearch.Text;
-                string query = $"select * from SanPham where TenQuanAo like N'%{search}%' or MaQuanAo = N'{search}'";
+                query = $@"
+                    select * from SanPham sp 
+                    join TheLoai tl on sp.MaLoai = tl.MaLoai
+                    where sp.TenQuanAo like N'%{search}%' or sp.MaQuanAo = N'{search}' or tl.TenLoai like N'%{cbLoaiSP.Text}%'
+                ";
+
+                //if(cbLoaiSP.Text.Trim() != "")
+                //{
+                //    query = $@"
+                //    select * from SanPham sp 
+                //    join TheLoai tl on sp.MaLoai = tl.MaLoai
+                //    where tl.TenLoai like N'%{cbLoaiSP.Text}%'
+                //";
+                //}
 
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 showProduct(dt);
@@ -234,6 +252,75 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void showLoaiSp()
+        {
+            string query = $"select * from TheLoai";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cbLoaiSP.Items.Add(dt.Rows[i]["TenLoai"]);
+            }
+        }
+
+        private void showNhaCungCap()
+        {
+            string query = $"select * from NhaCungCap";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cbTenCC.Items.Add(dt.Rows[i]["TenNCC"]);
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txbSearch.Text = "";
+            cbLoaiSP.Text = "";
+            cbTenCC.Text = "";
+            string query = "select * from SanPham";
+            System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            showProduct(dt);
+        }
+
+        private void cbLoaiSP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (cbLoaiSP.Text.Trim() != "")
+            {
+                txbSearch.Text = "";
+                cbTenCC.Text = "";
+                string query = $@"
+                    select * from SanPham sp 
+                    join TheLoai tl on sp.MaLoai = tl.MaLoai
+                    where tl.TenLoai like N'%{cbLoaiSP.Text}%'
+                ";
+
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                showProduct(dt);
+            }
+        }
+
+        private void cbTenCC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            if (cbTenCC.Text.Trim() != "")
+            {
+                txbSearch.Text = "";
+                cbLoaiSP.Text = "";
+                string query = $@"
+                    select * from SanPham sp 
+                    join TheLoai tl on sp.MaLoai = tl.MaLoai
+                    join ChiTietHDN chdn on chdn.MaQuanAo = sp.MaQuanAo
+                    join HoaDonNhap hdn on hdn.SoHDN = chdn.SoHDN
+                    join NhaCungCap ncc on hdn.MaNCC = ncc.MaNCC
+                    where ncc.TenNCC like N'%{cbTenCC.Text}%'
+                ";
+
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                showProduct(dt);
+            }
         }
     }
 }

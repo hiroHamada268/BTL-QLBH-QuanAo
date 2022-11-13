@@ -17,311 +17,111 @@ namespace BTL_QLCuaHangBanQuanAo
 {
     public partial class Form1 : Form
     {
-		private Form activeForm;
+        private Form activeForm;
 
-		private void LoadMutilForm(Form form)
-		{
-			if (this.panelMain.Controls.Count > 0)
+        private void LoadMutilForm(Form form)
+        {
+            if (this.panelMain.Controls.Count > 0)
             {
-				this.panelMain.Controls.RemoveAt(0);
+                this.panelMain.Controls.RemoveAt(0);
             }
-			activeForm = form;
-			form.TopLevel = false;
-			form.FormBorderStyle = FormBorderStyle.None;
-			form.Dock = DockStyle.Fill;
-			this.panelMain.Controls.Add(form);
-			this.panelMain.Tag = form;
-			form.BringToFront();
-			form.Show();
-			lblTieuDe.Text = form.Text;
-		}
+            activeForm = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            this.panelMain.Controls.Add(form);
+            this.panelMain.Tag = form;
+            form.BringToFront();
+            form.Show();
+            lblTieuDe.Text = form.Text;
+            lblTieuDe.Anchor = (AnchorStyles.Left & AnchorStyles.Right);
 
-		public Form1()
+        }
+
+        public Form1()
         {
             InitializeComponent();
-		}
+        }
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
-			LoadMutilForm(new Form_BanHang());
+            LoadMutilForm(new Form_BanHang());
         }
 
         private void btnSp_Click(object sender, EventArgs e)
         {
-			LoadMutilForm(new Form_SanPham());
-		}
+            LoadMutilForm(new Form_SanPham());
+        }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-			LoadMutilForm(new Form_NhanVien());
-		}
+            LoadMutilForm(new Form_NhanVien());
+        }
 
-		private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             LoadMutilForm(new Form_HienThiMatHang());
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-			LoadMutilForm(new Form_KhachHang());
+            LoadMutilForm(new Form_KhachHang());
         }
 
-		private void btnCongViec_Click(object sender, EventArgs e)
-		{
-			LoadMutilForm(new Form_CongViec());
-		}
+        private void btnCongViec_Click(object sender, EventArgs e)
+        {
+            LoadMutilForm(new Form_CongViec());
+        }
 
-		private void btnTheLoai_Click(object sender, EventArgs e)
-		{
+        private void btnTheLoai_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_TheLoai());
         }
 
-		private void btnCo_Click(object sender, EventArgs e)
-		{
+        private void btnCo_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_Co());
         }
-		
-		private void btnChatLieu_Click(object sender, EventArgs e)
-		{
+
+        private void btnChatLieu_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_ChatLieu());
         }
 
-		private void btnMau_Click(object sender, EventArgs e)
-		{
+        private void btnMau_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_Mau());
         }
 
-		private void btnDoiTuong_Click(object sender, EventArgs e)
-		{
+        private void btnDoiTuong_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_DoiTuong());
         }
 
-		private void btnMua_Click(object sender, EventArgs e)
-		{
+        private void btnMua_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_Mua());
         }
 
-		private void btnNoiSanXuat_Click(object sender, EventArgs e)
-		{
+        private void btnNoiSanXuat_Click(object sender, EventArgs e)
+        {
             LoadMutilForm(new Form_NoiSanXuat());
         }
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
+        private void Form1_Load(object sender, EventArgs e)
+        {
             Form_HienThiMatHang fh = new Form_HienThiMatHang();
             LoadMutilForm(fh);
             ////this.panelMain.Controls.Add(f);
             //btnLoad_Click(sender, e);
 
-            if(StaticData.datatable != null)
+
+            if (StaticData.datatable != null)
             {
                 lblTenUser.Text = StaticData.datatable.Rows[0]["TenDangNhap"].ToString();
                 lblEmail.Text = StaticData.datatable.Rows[0]["Email"].ToString();
                 lblQuyen.Text = StaticData.datatable.Rows[0]["Quyen"].ToString();
             }
-
-            //showMatHangDaMua();
-
-            //showPrice();
         }
-
-        //private void showPrice()
-        //{
-        //    string query = $@"
-        //        select sum(mh.SoLuong * sp.DonGiaBan) Price from MuaHang mh
-        //        join SanPham sp on mh.MaQuanAo = sp.maQuanAo
-        //        where mh.MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}'
-        //    ";
-
-        //    object price = DataProvider.Instance.ExecuteScalar(query);
-        //    lblPrice.Text = price.ToString();
-        //}
-
-        //private void showProduct(DataTable dt)
-        //{
-        //    for (int i = 0; i < dt.Rows.Count; i++)
-        //    {
-        //        DataRow dataRow = dt.Rows[i];
-        //        Panel panel_FL = new Panel();
-        //        panel_FL.Size = new Size(230, 230);
-
-        //        PictureBox pb = new PictureBox();
-        //        pb.Size = new Size(230, 160);
-
-        //        // Xử lí đường dẫn tương đối
-
-        //        //pb.Image = new Bitmap(dataRow[3].ToString());
-        //        string path = @"asset\ImgBTL" + $@"\{dataRow[3]}";
-        //        pb.Image = Image.FromFile(
-        //          Path.Combine(
-        //             Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
-        //             path));
-        //        pb.SizeMode = PictureBoxSizeMode.StretchImage;
-
-        //        Label lbl = new Label();
-        //        if (dataRow[1].ToString().Length > 35)
-        //        {
-        //            lbl.Text = dataRow[1].ToString().Substring(0, 20) + "...";
-        //        }
-        //        else
-        //        {
-        //            lbl.Text = dataRow[1].ToString();
-        //        }
-        //        lbl.Location = new System.Drawing.Point(10, 180);
-        //        lbl.AutoSize = true;
-        //        lbl.Font = new Font("Calibri", 10);
-
-        //        pb.MouseClick += new MouseEventHandler((o, a) =>
-        //        {
-        //            StaticData.dataRowSp = dataRow;
-        //            Form_DetailSP dp = new Form_DetailSP();
-        //            dp.ShowDialog();
-        //        });
-
-        //        Button btnMua = new Button();
-        //        btnMua.Text = "Mua";
-        //        btnMua.Location = new Point(0, 200);
-
-        //        btnMua.MouseClick += new MouseEventHandler((o, a) =>
-        //        {
-        //            StaticData.dataRowSpMua = dataRow;
-        //            try
-        //            {
-        //                // Tim xem sp da duoc mua hay chua neu roi thi tang them so luong khi ma bam mu lai
-        //                string queryCheck = $"select * from MuaHang where MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}' and MaQuanAo = N'{dataRow["MaQuanAo"]}'";
-        //                DataTable dtMuaHang = DataProvider.Instance.ExecuteQuery(queryCheck);
-        //                if (dtMuaHang.Rows.Count > 0)
-        //                {
-        //                    string queryUpdateSoLuong = $"update MuaHang set SoLuong = '{int.Parse(dtMuaHang.Rows[0]["SoLuong"].ToString()) + 1}' where MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}' and MaQuanAo = N'{dataRow["MaQuanAo"]}' ";
-        //                    DataProvider.Instance.ExecuteNonQuery(queryUpdateSoLuong);
-        //                    showMatHangDaMua();
-        //                    MessageBox.Show("Bạn đã mua hàng thành công");
-        //                }
-        //                else
-        //                {
-        //                    string sinhMaMua = $"select dbo.SinhMaMuaHang()";
-        //                    object maSinh = DataProvider.Instance.ExecuteScalar(sinhMaMua);
-        //                    string query = $@"
-        //                        INSERT INTO MuaHang
-        //                        VALUES(N'{maSinh}', N'{StaticData.datatable.Rows[0]["MaUser"]}', N'{dataRow["MaQuanAo"]}', '1', GetDate())";
-        //                    DataProvider.Instance.ExecuteNonQuery(query);
-
-        //                    showMatHangDaMua();
-        //                    showPrice();
-
-        //                    MessageBox.Show("Bạn đã mua hàng thành công");
-        //                }
-
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                MessageBox.Show(ex.Message);
-        //            }
-        //        });
-
-        //        panel_FL.Controls.Add(pb);
-        //        panel_FL.Controls.Add(lbl);
-        //        panel_FL.Controls.Add(btnMua);
-        //        panel_FL.BorderStyle = BorderStyle.FixedSingle;
-
-        //        flowLayoutPanel1.Controls.Add(panel_FL);
-        //    }
-        //}
-
-        //private void btnLoad_Click(object sender, EventArgs e)
-        //{
-        //    flowLayoutPanel1.Controls.Clear();
-        //    if (flowLayoutPanel1.Controls.Count == 0)
-        //    {
-        //        string query = "select * from SanPham";
-        //        System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-        //        showProduct(dt);
-        //    }
-        //}
-
-        //private void showMatHangDaMua()
-        //{
-        //    try
-        //    {
-        //        string query = $@"
-        //            select mh.MaMuaHang, sp.MaQuanAo MaSp, NguoiDung.TenDangNhap, sp.TenQuanAo, mh.SoLuong, mh.NgayMua  from MuaHang mh
-        //            join SanPham sp on mh.MaQuanAo = sp.MaQuanAo
-        //            join NguoiDung on mh.MaUser = NguoiDung.MaUser
-        //            where NguoiDung.MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}'";
-        //        System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-        //        dgvDsSpMua.DataSource = dt;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //}
-
-        //private void btnApDung_Click(object sender, EventArgs e)
-        //{
-        //    flowLayoutPanel1.Controls.Clear();
-
-        //    if (flowLayoutPanel1.Controls.Count == 0)
-        //    {
-        //        string search = txbSearch.Text;
-        //        string query = $"select * from SanPham where TenQuanAo like N'%{search}%' or MaQuanAo = N'{search}'";
-
-        //        DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-        //        showProduct(dt);
-        //    }
-        //}
-
-        //private void dgvDsSpMua_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    if (dgvDsSpMua.SelectedRows.Count > 0)
-        //    {
-        //        DataGridViewRow row = dgvDsSpMua.Rows[e.RowIndex];
-        //        string maSp = row.Cells["MaSp"].Value.ToString();
-        //        txbMaSp.Text = maSp;
-
-        //        if (maSp == null)
-        //        {
-        //            MessageBox.Show("Bạn cần chọn một hàng để xem thông tin!");
-        //        }
-        //        else
-        //        {
-        //            string query = $"select * from SanPham where maQuanAo = N'{maSp}'";
-        //            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-        //            StaticData.dataRowSp = dt.Rows[0];
-        //            Form_DetailSP dp = new Form_DetailSP();
-        //            dp.ShowDialog();
-        //        }
-        //    }
-        //}
-
-        //private void btnXoaSp_Click(object sender, EventArgs e)
-        //{
-        //    if (txbMaSp.Text.Trim() == "")
-        //    {
-        //        MessageBox.Show("Bạn cần chọn một sản phẩm để xóa!");
-        //    }
-        //    else if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-        //    {
-        //        string query = $"delete from MuaHang where maQuanAo = N'{txbMaSp.Text}'";
-        //        DataProvider.Instance.ExecuteNonQuery(query);
-        //        txbMaSp.Text = "";
-
-        //        showMatHangDaMua();
-        //        showPrice();
-
-        //    }
-        //}
-
-        //private void btnHuy_Click(object sender, EventArgs e)
-        //{
-        //    txbSoDienThoai.Text = "";
-        //    txbTienKHTra.Text = "";
-        //    txbTenKhachHang.Text = "";
-        //}
-
-        //private void btnThanhToan_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

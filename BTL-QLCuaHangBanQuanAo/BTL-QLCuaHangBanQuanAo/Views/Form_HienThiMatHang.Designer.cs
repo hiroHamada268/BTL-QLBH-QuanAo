@@ -61,7 +61,7 @@
             this.btnApDung = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txbSearch = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -131,6 +131,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 44);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -353,6 +354,7 @@
             // 
             // panel9
             // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label5);
             this.panel9.Controls.Add(this.btnLoad);
             this.panel9.Controls.Add(this.cbTenCC);
@@ -361,7 +363,7 @@
             this.panel9.Controls.Add(this.btnApDung);
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.txbSearch);
-            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.btnLamMoi);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 44);
             this.panel9.Name = "panel9";
@@ -394,19 +396,23 @@
             // 
             // cbTenCC
             // 
+            this.cbTenCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenCC.FormattingEnabled = true;
             this.cbTenCC.Location = new System.Drawing.Point(389, 32);
             this.cbTenCC.Name = "cbTenCC";
-            this.cbTenCC.Size = new System.Drawing.Size(121, 21);
+            this.cbTenCC.Size = new System.Drawing.Size(140, 28);
             this.cbTenCC.TabIndex = 5;
+            this.cbTenCC.SelectedIndexChanged += new System.EventHandler(this.cbTenCC_SelectedIndexChanged);
             // 
             // cbLoaiSP
             // 
+            this.cbLoaiSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiSP.FormattingEnabled = true;
             this.cbLoaiSP.Location = new System.Drawing.Point(236, 32);
             this.cbLoaiSP.Name = "cbLoaiSP";
-            this.cbLoaiSP.Size = new System.Drawing.Size(113, 21);
+            this.cbLoaiSP.Size = new System.Drawing.Size(113, 28);
             this.cbLoaiSP.TabIndex = 4;
+            this.cbLoaiSP.SelectedIndexChanged += new System.EventHandler(this.cbLoaiSP_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -444,24 +450,26 @@
             // 
             // txbSearch
             // 
+            this.txbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSearch.Location = new System.Drawing.Point(15, 26);
             this.txbSearch.Multiline = true;
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.Size = new System.Drawing.Size(191, 33);
             this.txbSearch.TabIndex = 1;
             // 
-            // button2
+            // btnLamMoi
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(115, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 35);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "&Làm Mới";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLamMoi.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(115, 65);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(94, 35);
+            this.btnLamMoi.TabIndex = 6;
+            this.btnLamMoi.Text = "&Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // panel8
             // 
@@ -633,7 +641,7 @@
         private System.Windows.Forms.Button btnApDung;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbSearch;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel12;
