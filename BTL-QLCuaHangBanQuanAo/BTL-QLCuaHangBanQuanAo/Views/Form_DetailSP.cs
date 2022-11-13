@@ -21,11 +21,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void Form_DetailSP_Load(object sender, EventArgs e)
         {
-            if(StaticData.dataTableSp != null)
+            if(StaticData.dataRowSp != null)
             {
-                pictureBox1.Image = new Bitmap(StaticData.dataTableSp["Anh"].ToString());
+                pictureBox1.Image = new Bitmap(StaticData.dataRowSp["Anh"].ToString());
 
-                if(int.Parse(StaticData.dataTableSp["SoLuong"].ToString()) > 0)
+                if(int.Parse(StaticData.dataRowSp["SoLuong"].ToString()) > 0)
                 {
                     lblTrangThai.Text = "Còn Hàng";
                 }
@@ -34,26 +34,26 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                     lblTrangThai.Text = "Hết Hàng";
                 } 
 
-                lblTieuDe.Text = StaticData.dataTableSp["TenQuanAo"].ToString();
-                lblSoLuong.Text = StaticData.dataTableSp["SoLuong"].ToString();
+                lblTieuDe.Text = StaticData.dataRowSp["TenQuanAo"].ToString();
+                lblSoLuong.Text = StaticData.dataRowSp["SoLuong"].ToString();
 
-                string queryCo = $"select * from SanPham sp join Co c on sp.MaCo = c.MaCo where c.MaCo = N'{StaticData.dataTableSp["MaCo"]}'";
+                string queryCo = $"select * from SanPham sp join Co c on sp.MaCo = c.MaCo where c.MaCo = N'{StaticData.dataRowSp["MaCo"]}'";
                 DataTable dtCo = DataProvider.Instance.ExecuteQuery(queryCo);
                 if (dtCo != null)
                 {
                     lblMaCo.Text = dtCo.Rows[0]["TenCo"].ToString();
                 }
-                lblCo.Text = StaticData.dataTableSp["MaCo"].ToString();
+                lblCo.Text = StaticData.dataRowSp["MaCo"].ToString();
 
-                lblDonGiaBan.Text = StaticData.dataTableSp["DonGiaBan"].ToString();
+                lblDonGiaBan.Text = StaticData.dataRowSp["DonGiaBan"].ToString();
 
-                string query = $"select * from SanPham sp join ChatLieu cl on sp.MaChatLieu = cl.MaChatLieu where cl.MaChatLieu = N'{StaticData.dataTableSp["MaChatLieu"]}'";
+                string query = $"select * from SanPham sp join ChatLieu cl on sp.MaChatLieu = cl.MaChatLieu where cl.MaChatLieu = N'{StaticData.dataRowSp["MaChatLieu"]}'";
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 if(dt != null)
                 {
                     lblChatLieu.Text = dt.Rows[0]["TenChatLieu"].ToString();
                 }
-                lblDonGiaBan.Text = StaticData.dataTableSp["DonGiaBan"].ToString();
+                lblDonGiaBan.Text = StaticData.dataRowSp["DonGiaBan"].ToString();
             }
         }
     }

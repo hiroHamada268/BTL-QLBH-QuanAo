@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,7 +39,6 @@ namespace BTL_QLCuaHangBanQuanAo
 		public Form1()
         {
             InitializeComponent();
-
 		}
 
         private void btnBanHang_Click(object sender, EventArgs e)
@@ -57,8 +58,8 @@ namespace BTL_QLCuaHangBanQuanAo
 
 		private void pictureBox1_Click(object sender, EventArgs e)
         {
-			LoadMutilForm(new Form_HienThiMatHang());
-		}
+            LoadMutilForm(new Form1());
+        }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
@@ -115,6 +116,22 @@ namespace BTL_QLCuaHangBanQuanAo
                 lblEmail.Text = StaticData.datatable.Rows[0]["Email"].ToString();
                 lblQuyen.Text = StaticData.datatable.Rows[0]["Quyen"].ToString();
             }
+
+            showMatHangDaMua();
+
+            showPrice();
+        }
+
+        private void showPrice()
+        {
+            string query = $@"
+                select sum(mh.SoLuong * sp.DonGiaBan) Price from MuaHang mh
+                join SanPham sp on mh.MaQuanAo = sp.maQuanAo
+                where mh.MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}'
+            ";
+
+            object price = DataProvider.Instance.ExecuteScalar(query);
+            lblPrice.Text = price.ToString();
         }
 
         private void showProduct(DataTable dt)
@@ -122,34 +139,82 @@ namespace BTL_QLCuaHangBanQuanAo
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 DataRow dataRow = dt.Rows[i];
-
                 Panel panel_FL = new Panel();
-                panel_FL.Size = new Size(230, 200);
+                panel_FL.Size = new Size(230, 230);
 
                 PictureBox pb = new PictureBox();
                 pb.Size = new Size(230, 160);
-                pb.Image = new Bitmap(dataRow[3].ToString());
+
+                // Xử lí đường dẫn tương đối
+
+                //pb.Image = new Bitmap(dataRow[3].ToString());
+                string path = @"asset\ImgBTL" + $@"\{dataRow[3]}";
+                pb.Image = Image.FromFile(
+                  Path.Combine(
+                     Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
+                     path));
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
 
-
                 Label lbl = new Label();
-                lbl.Text = dataRow[1].ToString();
+                if(dataRow[1].ToString().Length > 35)
+                {
+                    lbl.Text = dataRow[1].ToString().Substring(0, 20) + "...";
+                } else {
+                    lbl.Text = dataRow[1].ToString();
+                }
                 lbl.Location = new System.Drawing.Point(10, 180);
                 lbl.AutoSize = true;
                 lbl.Font = new Font("Calibri", 10);
-
                 
                 pb.MouseClick += new MouseEventHandler((o, a) =>
                 {
-                    StaticData.dataTableSp = dataRow;
+                    StaticData.dataRowSp = dataRow;
                     Form_DetailSP dp = new Form_DetailSP();
                     dp.ShowDialog();
-                    //StaticData.dataTableSp.Rows.Clear();
+                });
 
+                Button btnMua = new Button();
+                btnMua.Text = "Mua";
+                btnMua.Location = new Point(0, 200);
+
+                btnMua.MouseClick += new MouseEventHandler((o, a) =>
+                {
+                    StaticData.dataRowSpMua = dataRow;
+                    try
+                    {
+                        // Tim xem sp da duoc mua hay chua neu roi thi tang them so luong khi ma bam mu lai
+                        string queryCheck = $"select * from MuaHang where MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}' and MaQuanAo = N'{dataRow["MaQuanAo"]}'";
+                        DataTable dtMuaHang = DataProvider.Instance.ExecuteQuery(queryCheck);
+                        if(dtMuaHang.Rows.Count > 0)
+                        {
+                            string queryUpdateSoLuong = $"update MuaHang set SoLuong = '{int.Parse(dtMuaHang.Rows[0]["SoLuong"].ToString()) + 1}' where MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}' and MaQuanAo = N'{dataRow["MaQuanAo"]}' ";
+                            DataProvider.Instance.ExecuteNonQuery(queryUpdateSoLuong);
+                            showMatHangDaMua();
+                            MessageBox.Show("Bạn đã mua hàng thành công");
+                        } else
+                        {
+                            string sinhMaMua = $"select dbo.SinhMaMuaHang()";
+                            object maSinh = DataProvider.Instance.ExecuteScalar(sinhMaMua);
+                            string query = $@"
+                                INSERT INTO MuaHang
+                                VALUES(N'{maSinh}', N'{StaticData.datatable.Rows[0]["MaUser"]}', N'{dataRow["MaQuanAo"]}', '1', GetDate())";
+                            DataProvider.Instance.ExecuteNonQuery(query);
+
+                            showMatHangDaMua();
+                            showPrice();
+
+                            MessageBox.Show("Bạn đã mua hàng thành công");
+                        }
+
+                    } catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 });
 
                 panel_FL.Controls.Add(pb);
                 panel_FL.Controls.Add(lbl);
+                panel_FL.Controls.Add(btnMua);
                 panel_FL.BorderStyle = BorderStyle.FixedSingle;
 
                 flowLayoutPanel1.Controls.Add(panel_FL);
@@ -167,6 +232,23 @@ namespace BTL_QLCuaHangBanQuanAo
             }
         }
 
+        private void showMatHangDaMua()
+        {
+            try
+            {
+                string query = $@"
+                    select mh.MaMuaHang, sp.MaQuanAo MaSp, NguoiDung.TenDangNhap, sp.TenQuanAo, mh.SoLuong, mh.NgayMua  from MuaHang mh
+                    join SanPham sp on mh.MaQuanAo = sp.MaQuanAo
+                    join NguoiDung on mh.MaUser = NguoiDung.MaUser
+                    where NguoiDung.MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}'";
+                System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                dgvDsSpMua.DataSource = dt;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void btnApDung_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -179,6 +261,59 @@ namespace BTL_QLCuaHangBanQuanAo
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 showProduct(dt);
             }
+        }
+
+        private void dgvDsSpMua_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvDsSpMua.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgvDsSpMua.Rows[e.RowIndex];
+                string maSp = row.Cells["MaSp"].Value.ToString();
+                txbMaSp.Text = maSp;
+
+                if(maSp == null)
+                {
+                    MessageBox.Show("Bạn cần chọn một hàng để xem thông tin!");
+                }
+                else
+                {
+                    string query = $"select * from SanPham where maQuanAo = N'{maSp}'";
+                    DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                    StaticData.dataRowSp = dt.Rows[0];
+                    Form_DetailSP dp = new Form_DetailSP();
+                    dp.ShowDialog();
+                }
+            }
+        }
+
+        private void btnXoaSp_Click(object sender, EventArgs e)
+        {
+            if(txbMaSp.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn cần chọn một sản phẩm để xóa!");
+            }
+            else if (MessageBox.Show("Bạn có chắc muốn xóa sản phẩm!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string query = $"delete from MuaHang where maQuanAo = N'{txbMaSp.Text}'";
+                DataProvider.Instance.ExecuteNonQuery(query);
+                txbMaSp.Text = "";
+
+                showMatHangDaMua();
+                showPrice();
+
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txbSoDienThoai.Text = "";
+            txbTienKHTra.Text = "";
+            txbTenKhachHang.Text = "";
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

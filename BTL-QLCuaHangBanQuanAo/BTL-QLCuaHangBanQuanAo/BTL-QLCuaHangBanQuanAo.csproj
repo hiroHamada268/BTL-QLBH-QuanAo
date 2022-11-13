@@ -235,6 +235,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Debug\asset\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
