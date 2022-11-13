@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BTL_QLCuaHangBanQuanAo.Model.Database
 {
@@ -119,7 +120,7 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             }
             return data;
         }
-
+        
         public void FillCBO(string sql, ComboBox cbo, string name)
         {
             using (SqlConnection connection = new SqlConnection(connectionStr))
@@ -141,6 +142,28 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
                 DataTable table = ExecuteQuery(sql);
                 DataRow data = table.Rows[0];
                 Txt.Text = data[s].ToString();
+            }
+        }
+        public string SinhMaHDB()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
+                DataTable dt = ExecuteQuery("SELECT dbo.SinhMaHDB()");
+                string str = dt.Rows[0][0].ToString();
+                return str;
+                connection.Close();
+            }
+        }
+        public string SinhMaHDN()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            {
+                connection.Open();
+                DataTable dt = ExecuteQuery("SELECT dbo.SinhMaHDN()");
+                string str = dt.Rows[0][0].ToString();
+                return str;
+                connection.Close();
             }
         }
 
@@ -222,5 +245,6 @@ namespace BTL_QLCuaHangBanQuanAo.Model.Database
             exBook.SaveAs(saved.FileName);
             exApp.Quit();
         }
+
     }
 }

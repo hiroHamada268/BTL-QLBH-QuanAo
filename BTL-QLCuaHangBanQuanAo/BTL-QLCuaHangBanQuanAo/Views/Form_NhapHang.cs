@@ -43,7 +43,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             OldTien = 0;
             listMaQA.Clear();
             table.Rows.Clear();
-            txtManhap.Text = data.ExecuteFunction("SinhMaHDN");
+            //txtManhap.Text = data.ExecuteFunction("SinhMaHDN");
+            txtManhap.Text = data.SinhMaHDN();
             string qr = $"select distinct MaNV from NhanVien";
             data.FillCBO(qr, cboMaNV, "MaNV");
             qr = $"select distinct MaNCC from NhaCungCap";
@@ -283,6 +284,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                 return false;
             }
             return true;
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

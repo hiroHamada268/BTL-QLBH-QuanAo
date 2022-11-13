@@ -191,5 +191,10 @@ namespace BTL_QLCuaHangBanQuanAo
         {
             LoadMutilForm(new Form_NhaCungCap());
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
