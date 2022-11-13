@@ -19,7 +19,6 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         DataTable table = new DataTable();
         float Tien = 0;
         float OldTien = 0;
-        int index = -1;
         List<string> listMaQA = new List<string>();
         public Form_NhapHang()
         {
@@ -30,7 +29,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
 
             //table.Columns.Add(new DataColumn("TongTien"));
-
+            table.Columns.Add(new DataColumn("MaQuanAo"));
+            table.Columns.Add(new DataColumn("SoLuong"));
+            table.Columns.Add(new DataColumn("DonGia"));
+            table.Columns.Add(new DataColumn("GiamGia"));
+            table.Columns.Add(new DataColumn("ThanhTien"));
             StartPr();
         }
 
@@ -39,26 +42,14 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             Tien = 0;
             OldTien = 0;
             listMaQA.Clear();
-            index = -1;
             table.Rows.Clear();
-
+            txtManhap.Text = data.ExecuteFunction("SinhMaHDN");
             string qr = $"select distinct MaNV from NhanVien";
             data.FillCBO(qr, cboMaNV, "MaNV");
             qr = $"select distinct MaNCC from NhaCungCap";
             data.FillCBO(qr, cboMaNCC, "MaNCC");
             qr = $"select distinct MaQuanAo from SanPham";
             data.FillCBO(qr, cboMaQA, "MaQuanAo");
-
-            table.Columns.Add(new DataColumn("MaQuanAo"));
-            table.Columns.Add(new DataColumn("SoLuong"));
-            table.Columns.Add(new DataColumn("DonGia"));
-            table.Columns.Add(new DataColumn("GiamGia"));
-            table.Columns.Add(new DataColumn("ThanhTien"));
-            string sql = $"select distinct SoHDN from HoaDonNhap";
-            DataTable dttable = data.ExecuteQuery(sql);
-            DataRow dataRow = dttable.Rows[dttable.Rows.Count - 1];
-            string SOHDN = dataRow["SoHDN"].ToString();
-            txtManhap.Text = (int.Parse(SOHDN) + 1).ToString();
         }
 
         private void cboMaNV_SelectedIndexChanged(object sender, EventArgs e)
@@ -123,6 +114,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void btnThemlai_Click(object sender, EventArgs e)
         {
+            if (!checkDuLieu1())
+            {
+                MessageBox.Show("Chưa điền đủ thông tin");
+                return;
+            }
             if (listMaQA.Contains(cboMaQA.SelectedValue.ToString()))
             {
                 MessageBox.Show("Sản phẩm này đã có trong đơn hàng !\nNếu bạn muốn thêm vui lòng chọn sửa !");
@@ -192,15 +188,17 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            int i = dgvdata.CurrentRow.Index;
+            listMaQA.Remove(dgvdata.Rows[i].Cells[0].Value.ToString());
             Tien -= OldTien;
-            dgvdata.Rows.RemoveAt(index);
+            txtTongtien.Text = Tien.ToString();
+            dgvdata.Rows.RemoveAt(i);
             btnXoa.Enabled = false;
         }
 
         private void dgvdata_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow data = dgvdata.Rows[e.RowIndex];
-            index = e.RowIndex;
             //MaQA = data.Cells[0].Value.ToString();
             cboMaQA.SelectedValue = data.Cells[0].Value.ToString();
             txtSL.Text = data.Cells[1].Value.ToString();
@@ -214,7 +212,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            DataGridViewRow data = dgvdata.Rows[index];
+            DataGridViewRow data = dgvdata.Rows[dgvdata.CurrentRow.Index];
             data.Cells[0].Value = cboMaQA.SelectedValue.ToString();
             data.Cells[1].Value = txtSL.Text;
             data.Cells[2].Value = txtDongia.Text;
@@ -228,16 +226,63 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void btnThemnhom_Click(object sender, EventArgs e)
         {
-            string sql = $"INSERT INTO HoaDonNhap VALUES({txtManhap.Text},{dateTimeNH.Text},{txtTongtien.Text},'{cboMaNV.Text}','{cboMaNCC.Text}')";
+            if (!checkDuLieu2())
+            {
+                MessageBox.Show("Bạn chưa điền đủ thông tin");
+                return;
+            }
+            string sql = $"INSERT INTO HoaDonNhap VALUES('{txtManhap.Text}','{Convert.ToDateTime(dateTimeNH.Text)}',{txtTongtien.Text},'{cboMaNV.Text}','{cboMaNCC.Text}')";
             data.ExecuteNonQuery(sql);
             for (int i = 0; i < dgvdata.Rows.Count - 1; i++)
             {
-                sql = $"INSERT INTO ChiTietHDN VALUES({dgvdata.Rows[i].Cells[1].Value.ToString()},{dgvdata.Rows[i].Cells[2].Value.ToString()},{dgvdata.Rows[i].Cells[3].Value.ToString()},{dgvdata.Rows[i].Cells[4].Value.ToString()},'{dgvdata.Rows[i].Cells[0].Value.ToString()}',{txtManhap.Text})";
+                sql = $"INSERT INTO ChiTietHDN VALUES({dgvdata.Rows[i].Cells[1].Value.ToString()},{dgvdata.Rows[i].Cells[2].Value.ToString()},{dgvdata.Rows[i].Cells[3].Value.ToString()},{dgvdata.Rows[i].Cells[4].Value.ToString()},'{dgvdata.Rows[i].Cells[0].Value.ToString()}','{txtManhap.Text}')";
                 data.ExecuteNonQuery(sql);
             }
             MessageBox.Show("Thêm thành công");
 
             StartPr();
+        }
+        bool checkDuLieu1()
+        {
+            if (cboMaQA.SelectedIndex < 0)
+            {
+                cboMaQA.Focus();
+                return false;
+            }
+            if (txtSL.Text.Trim() == "")
+            {
+                txtSL.Focus();
+                return false;
+            }
+            if (txtGiamGia.Text.Trim() == "")
+            {
+                txtGiamGia.Focus();
+                return false;
+            }
+            if (txtDongia.Text.Trim() == "")
+            {
+                txtDongia.Focus();
+                return false;
+            }
+            return true;
+        }
+        bool checkDuLieu2()
+        {
+            if (!checkDuLieu1())
+            {
+                return false;
+            }
+            if (cboMaNCC.SelectedIndex < 0)
+            {
+                cboMaNCC.Focus();
+                return false;
+            }
+            if (cboMaNV.SelectedIndex < 0)
+            {
+                cboMaNV.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }
