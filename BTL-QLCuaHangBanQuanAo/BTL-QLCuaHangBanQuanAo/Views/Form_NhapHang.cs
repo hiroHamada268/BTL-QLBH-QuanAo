@@ -17,8 +17,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
     {
         DataProvider data = new DataProvider();
         DataTable table = new DataTable();
-        float Tien = 0;
-        float OldTien = 0;
+        double Tien = 0;
+        double OldTien = 0;
         List<string> listMaQA = new List<string>();
         public Form_NhapHang()
         {
@@ -132,7 +132,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             row["DonGia"] = txtDongia.Text;
             row["GiamGia"] = txtGiamGia.Text;
             row["ThanhTien"] = txtThanhTien.Text;
-            Tien += float.Parse(txtThanhTien.Text);
+            Tien += double.Parse(txtThanhTien.Text);
             txtTongtien.Text = Tien.ToString();
             table.Rows.Add(row);
             dgvdata.DataSource = table;
@@ -143,7 +143,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSL.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamGia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSL.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamGia.Text) / 100))).ToString();
             }
             catch
             {
@@ -159,7 +159,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSL.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamGia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSL.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamGia.Text) / 100))).ToString();
             }
             catch
             {
@@ -175,7 +175,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSL.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamGia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSL.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamGia.Text) / 100))).ToString();
             }
             catch
             {
@@ -206,7 +206,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             txtDongia.Text = data.Cells[2].Value.ToString();
             txtGiamGia.Text = data.Cells[3].Value.ToString();
             txtThanhTien.Text = data.Cells[4].Value.ToString();
-            OldTien = float.Parse(data.Cells[4].Value.ToString());
+            OldTien = double.Parse(data.Cells[4].Value.ToString());
             btnXoa.Enabled = true;
             btnSua.Enabled = true;
         }
@@ -219,7 +219,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             data.Cells[2].Value = txtDongia.Text;
             data.Cells[3].Value = txtGiamGia.Text;
             data.Cells[4].Value = txtThanhTien.Text;
-            Tien += (float.Parse(txtThanhTien.Text) - OldTien);
+            Tien += (double.Parse(txtThanhTien.Text) - OldTien);
             txtTongtien.Text = Tien.ToString();
             table = (DataTable)dgvdata.DataSource;
             btnSua.Enabled = false;
@@ -232,8 +232,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                 MessageBox.Show("Bạn chưa điền đủ thông tin");
                 return;
             }
-            string sql = $"INSERT INTO HoaDonNhap VALUES('{txtManhap.Text}','{Convert.ToDateTime(dateTimeNH.Text)}',{txtTongtien.Text},'{cboMaNV.Text}','{cboMaNCC.Text}')";
-            data.ExecuteNonQuery(sql);
+           
+            string sql = $"INSERT INTO HoaDonNhap VALUES('{txtManhap.Text}','{dateTimeNH.Value.ToString("yyyy-MM-dd")}',{txtTongtien.Text},'{cboMaNV.Text}','{cboMaNCC.Text}')"; data.ExecuteNonQuery(sql);
             for (int i = 0; i < dgvdata.Rows.Count - 1; i++)
             {
                 sql = $"INSERT INTO ChiTietHDN VALUES({dgvdata.Rows[i].Cells[1].Value.ToString()},{dgvdata.Rows[i].Cells[2].Value.ToString()},{dgvdata.Rows[i].Cells[3].Value.ToString()},{dgvdata.Rows[i].Cells[4].Value.ToString()},'{dgvdata.Rows[i].Cells[0].Value.ToString()}','{txtManhap.Text}')";
