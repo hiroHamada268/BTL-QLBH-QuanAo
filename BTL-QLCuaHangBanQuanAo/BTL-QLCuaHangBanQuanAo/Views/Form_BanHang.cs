@@ -117,10 +117,6 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         }
         bool checkDuLieu2()
         {
-            if (!checkDuLieu1())
-            {
-                return false;
-            }
             if (cboKhachhang.SelectedIndex < 0)
             {
                 cboKhachhang.Focus();
@@ -251,7 +247,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             }
             if (float.Parse(txtTrakhach.Text) < 0)
             {
-                MessageBox.Show($"Khách cần trả thêm {Math.Abs(float.Parse(txtTrakhach.Text))} tiền");
+                MessageBox.Show($"Thêm thất bại\nKhách cần trả thêm {Math.Abs(float.Parse(txtTrakhach.Text))} tiền");
+                return;
             }
             else if (float.Parse(txtTrakhach.Text) > 0)
             {

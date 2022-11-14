@@ -43,7 +43,14 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             OldTien = 0;
             listMaQA.Clear();
             table.Rows.Clear();
-            //txtManhap.Text = data.ExecuteFunction("SinhMaHDN");
+            cboMaNCC.SelectedItem = -1;
+            cboMaNV.SelectedItem = -1;
+            cboMaQA.SelectedItem = -1;
+            txtTongtien.Text = "0";
+            txtGiamGia.Text = "0";
+            txtDongia.Text = "0";
+            txtSL.Text = "0";
+            txtThanhTien.Text = "0";
             txtManhap.Text = data.SinhMaHDN();
             string qr = $"select distinct MaNV from NhanVien";
             data.FillCBO(qr, cboMaNV, "MaNV");
@@ -117,7 +124,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             if (!checkDuLieu1())
             {
-                MessageBox.Show("Chưa điền đủ thông tin");
+                MessageBox.Show("Chưa điền đủ thông tin, hoặc điền sai định dạng");
                 return;
             }
             if (listMaQA.Contains(cboMaQA.SelectedValue.ToString()))
@@ -227,6 +234,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void btnThemnhom_Click(object sender, EventArgs e)
         {
+            if (dgvdata.Rows.Count == 0)
+            {
+                MessageBox.Show("Chưa có mặt hàng nào trong giỏ");
+                return;
+            }
             if (!checkDuLieu2())
             {
                 MessageBox.Show("Bạn chưa điền đủ thông tin");
@@ -265,14 +277,22 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                 txtDongia.Focus();
                 return false;
             }
+            int TestCheckInt = 0;
+            float TestCheckFloat = 0;
+            if (!int.TryParse(txtSL.Text, out TestCheckInt) || TestCheckInt <= 0)
+            {
+                txtSL.Focus();
+                return false;
+            }
+            if (!float.TryParse(txtGiamGia.Text, out TestCheckFloat) || (TestCheckFloat < 0 || TestCheckFloat > 100))
+            {
+                txtGiamGia.Focus();
+                return false;
+            }
             return true;
         }
         bool checkDuLieu2()
         {
-            if (!checkDuLieu1())
-            {
-                return false;
-            }
             if (cboMaNCC.SelectedIndex < 0)
             {
                 cboMaNCC.Focus();
@@ -284,11 +304,6 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                 return false;
             }
             return true;
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
