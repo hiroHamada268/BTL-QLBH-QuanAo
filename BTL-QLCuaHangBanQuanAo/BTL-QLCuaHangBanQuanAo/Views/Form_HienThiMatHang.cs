@@ -111,6 +111,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                             string queryUpdateSoLuong = $"update MuaHang set SoLuong = '{int.Parse(dtMuaHang.Rows[0]["SoLuong"].ToString()) + 1}' where MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}' and MaQuanAo = N'{dataRow["MaQuanAo"]}' ";
                             DataProvider.Instance.ExecuteNonQuery(queryUpdateSoLuong);
                             showMatHangDaMua();
+                            showPrice();
+
                             MessageBox.Show("Bạn đã mua hàng thành công");
                         }
                         else
@@ -124,7 +126,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
                             showMatHangDaMua();
                             showPrice();
-
+                            showPrice();
                             MessageBox.Show("Bạn đã mua hàng thành công");
                         }
 
@@ -186,15 +188,6 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                     join TheLoai tl on sp.MaLoai = tl.MaLoai
                     where sp.TenQuanAo like N'%{search}%' or sp.MaQuanAo = N'{search}' or tl.TenLoai like N'%{cbLoaiSP.Text}%'
                 ";
-
-                //if(cbLoaiSP.Text.Trim() != "")
-                //{
-                //    query = $@"
-                //    select * from SanPham sp 
-                //    join TheLoai tl on sp.MaLoai = tl.MaLoai
-                //    where tl.TenLoai like N'%{cbLoaiSP.Text}%'
-                //";
-                //}
 
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 showProduct(dt);
