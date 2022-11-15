@@ -86,3 +86,4 @@ C:\Users\Tung Nhe\Documents\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QL
 C:\Users\Tung Nhe\Documents\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.PopUp.resources
 C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_NhaCungCap.resources
 C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_NhapHang.resources
+C:\Users\admin\OneDrive - University of transport and Communication\Tài liệu\GitHub\BTL-QLBH-QuanAo\BTL-QLCuaHangBanQuanAo\BTL-QLCuaHangBanQuanAo\obj\Debug\BTL_QLCuaHangBanQuanAo.Views.Form_DetailSP.resources

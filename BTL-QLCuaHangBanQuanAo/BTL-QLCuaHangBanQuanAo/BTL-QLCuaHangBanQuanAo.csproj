@@ -63,6 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,7 +245,21 @@
     <EmbeddedResource Include="Views\Form_TheLoai.resx">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Report\Report1.rdlc" />
+    <None Include="bin\Debug\asset\ImgBTL\SP0001.webp" />
+    <None Include="bin\Debug\asset\ImgBTL\SP0002.webp" />
     <None Include="bin\Debug\BTL-QLCuaHangBanQuanAo.exe.config" />
+    <None Include="DataDataSet.xsc">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet.xss">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -255,7 +274,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\Debug\asset\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +318,16 @@
     <None Include="Resources\mo-cua-hang-quan-ao-tre-em-o-que.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\asset\ImgBTL\SP0003.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0004.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0005.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0006.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0007.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0008.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0009.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0010.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0011.png" />
+    <Content Include="bin\Debug\asset\ImgBTL\SP0012.png" />
     <Content Include="bin\Debug\BTL-QLCuaHangBanQuanAo.exe" />
     <Content Include="bin\Debug\BTL-QLCuaHangBanQuanAo.pdb" />
     <Content Include="bin\Debug\DataBase\Data.mdf">

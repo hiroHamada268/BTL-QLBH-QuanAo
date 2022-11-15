@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.panelImage);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(789, 335);
             this.panel1.TabIndex = 0;
@@ -67,7 +67,7 @@
             this.panelLogin.Controls.Add(this.label1);
             this.panelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLogin.Location = new System.Drawing.Point(337, 0);
-            this.panelLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLogin.Margin = new System.Windows.Forms.Padding(4);
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(452, 335);
             this.panelLogin.TabIndex = 1;
@@ -89,7 +89,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(297, 261);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(99, 48);
             this.btnLogin.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(163, 261);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(104, 48);
             this.btnCancel.TabIndex = 5;
@@ -111,7 +111,7 @@
             // txbPassword
             // 
             this.txbPassword.Location = new System.Drawing.Point(49, 196);
-            this.txbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txbPassword.Multiline = true;
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '*';
@@ -121,7 +121,7 @@
             // txbEmail
             // 
             this.txbEmail.Location = new System.Drawing.Point(48, 114);
-            this.txbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txbEmail.Multiline = true;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(347, 38);
@@ -155,7 +155,7 @@
             this.panelImage.Controls.Add(this.pictureBox1);
             this.panelImage.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelImage.Location = new System.Drawing.Point(0, 0);
-            this.panelImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelImage.Margin = new System.Windows.Forms.Padding(4);
             this.panelImage.Name = "panelImage";
             this.panelImage.Size = new System.Drawing.Size(337, 335);
             this.panelImage.TabIndex = 0;
@@ -164,7 +164,7 @@
             // 
             this.pictureBox1.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources._61a0439062b821;
             this.pictureBox1.Location = new System.Drawing.Point(3, 48);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(331, 242);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,9 +177,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 335);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Login";
             this.Text = "Form_Login";
+            this.Load += new System.EventHandler(this.Form_Login_Load);
             this.panel1.ResumeLayout(false);
             this.panelLogin.ResumeLayout(false);
             this.panelLogin.PerformLayout();

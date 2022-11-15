@@ -43,10 +43,11 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void showPrice()
         {
+            DataTable dt = DataProvider.Instance.ExecuteQuery($"select * from NguoiDung");
             string query = $@"
                 select sum(mh.SoLuong * sp.DonGiaBan) Price from MuaHang mh
                 join SanPham sp on mh.MaQuanAo = sp.maQuanAo
-                where mh.MaUser = N'{StaticData.datatable.Rows[0]["MaUser"]}'
+                where mh.MaUser = N'{dt.Rows[0]["MaUser"]}'
             ";
 
             object price = DataProvider.Instance.ExecuteScalar(query);
@@ -153,7 +154,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 string query = "select * from SanPham";
                 System.Data.DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-                showProduct(dt);
+                //showProduct(dt);
             }
         }
 
@@ -254,6 +255,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 cbLoaiSP.Items.Add(dt.Rows[i]["TenLoai"]);
+                
             }
         }
 

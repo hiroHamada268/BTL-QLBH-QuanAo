@@ -61,5 +61,10 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             this.Close();
         }
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
