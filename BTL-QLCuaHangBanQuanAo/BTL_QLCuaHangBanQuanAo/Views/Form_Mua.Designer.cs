@@ -52,8 +52,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_Mua.Designer.cs
             this.btnReport = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
+=======
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_Mua.Designer.cs
             this.pnTitle.SuspendLayout();
             this.pnInput.SuspendLayout();
             this.grbCongCu.SuspendLayout();
@@ -400,7 +404,7 @@
             this.Controls.Add(this.pnTitle);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Mua";
-            this.Text = "Form_CongViec";
+            this.Text = "Form_Mua";
             this.Load += new System.EventHandler(this.Form_Mua_Load);
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
@@ -442,7 +446,11 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_Mua.Designer.cs
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnExcel;
+=======
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_Mua.Designer.cs
     }
 }

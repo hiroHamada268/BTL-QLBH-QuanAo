@@ -17,8 +17,14 @@ namespace BTL_QLCuaHangBanQuanAo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Program.cs
             //Application.Run(new Form1());
             Application.Run(new Form_Login());
+=======
+            Application.Run(new Form1());
+            //Application.Run(new Form_Login());
+
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Program.cs
         }
     }
 }

@@ -226,9 +226,15 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             txtTen.Text = dgvDanhSach.CurrentRow.Cells[1].Value.ToString();
         }
 
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_NoiSanXuat.cs
         private void btnExcel_Click(object sender, EventArgs e)
         {
             DataProvider.Instance.ExportFileExcel(dgvDanhSach, "Danh Sách Nơi Sản Xuất");
+=======
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_NoiSanXuat.cs
         }
     }
 }

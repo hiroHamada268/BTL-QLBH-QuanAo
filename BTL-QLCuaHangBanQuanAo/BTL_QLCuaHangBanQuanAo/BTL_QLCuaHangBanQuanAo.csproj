@@ -67,7 +67,7 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -159,6 +159,12 @@
     <Compile Include="Views\Form_Mua.Designer.cs">
       <DependentUpon>Form_Mua.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Form_NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Form_NhaCungCap.Designer.cs">
+      <DependentUpon>Form_NhaCungCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,11 +195,14 @@
     <Compile Include="Views\Form_TheLoai.Designer.cs">
       <DependentUpon>Form_TheLoai.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo.csproj
     <Compile Include="Winform_CuaHangQuanAoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Winform_CuaHangQuanAoDataSet.xsd</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo.csproj
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_Mua.resx">
       <DependentUpon>Form_Mua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Form_NhaCungCap.resx">
+      <DependentUpon>Form_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Form_NhanVien.resx">
       <DependentUpon>Form_NhanVien.cs</DependentUpon>

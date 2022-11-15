@@ -16,8 +16,8 @@ namespace BTL_QLCuaHangBanQuanAo.Views
     {
         DataProvider data = new DataProvider();
         DataTable table = new DataTable();
-        float Tien = 0;
-        float OldTien = 0;
+        double Tien = 0;
+        double OldTien = 0;
         List<string> listMaQA = new List<string>();
         public Form_BanHang()
         {
@@ -31,6 +31,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             table.Columns.Add(new DataColumn("DonGia"));
             table.Columns.Add(new DataColumn("GiamGia"));
             table.Columns.Add(new DataColumn("ThanhTien"));
+            dgvLapHD.DataSource = table;
             StartPr();
         }
         void StartPr()
@@ -40,6 +41,10 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             listMaQA.Clear();
             table.Rows.Clear();
             //txtMaHD.Text = data.ExecuteFunction("SinhMaHDB");
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.cs
+=======
+            txtMaHD.Text = data.SinhMaHDB();
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.cs
             string qr = $"select distinct MaNV from NhanVien";
             data.FillCBO(qr, cboMaNV, "MaNV");
             qr = $"select distinct MaKhach from KhachHang";
@@ -87,12 +92,12 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             row["DonGia"] = txtDongia.Text;
             row["GiamGia"] = txtGiamgia.Text;
             row["ThanhTien"] = txtThanhTien.Text;
-            Tien += float.Parse(txtThanhTien.Text);
+            Tien += double.Parse(txtThanhTien.Text);
             txtTong.Text = Tien.ToString();
             table.Rows.Add(row);
             dgvLapHD.DataSource = table;
             listMaQA.Add(cboSP.SelectedValue.ToString());
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         bool checkDuLieu1()
@@ -157,7 +162,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSoluong.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamgia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSoluong.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamgia.Text) / 100))).ToString();
             }
             catch
             {
@@ -167,14 +172,14 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 txtThanhTien.Text = "";
             }
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         private void txtGiamgia_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSoluong.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamgia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSoluong.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamgia.Text) / 100))).ToString();
             }
             catch
             {
@@ -184,7 +189,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 txtThanhTien.Text = "";
             }
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         private void txtGiamgia_KeyPress(object sender, KeyPressEventArgs e)
@@ -193,7 +198,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 if (Convert.ToInt16(e.KeyChar) != 8)
                 {
-                    float check = float.Parse(txtGiamgia.Text + Convert.ToChar(e.KeyChar).ToString());
+                    double check = double.Parse(txtGiamgia.Text + Convert.ToChar(e.KeyChar).ToString());
                     if (check > 100)
                     {
                         e.Handled = true;
@@ -205,14 +210,14 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 e.Handled = true;
             }
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         private void txtDongia_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                txtThanhTien.Text = (float.Parse(txtSoluong.Text) * float.Parse(txtDongia.Text) * (1 - (float.Parse(txtGiamgia.Text) / 100))).ToString();
+                txtThanhTien.Text = (double.Parse(txtSoluong.Text) * double.Parse(txtDongia.Text) * (1 - (double.Parse(txtGiamgia.Text) / 100))).ToString();
             }
             catch
             {
@@ -222,12 +227,12 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             {
                 txtThanhTien.Text = "";
             }
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
             int i = dgvLapHD.CurrentRow.Index;
             listMaQA.Remove(dgvLapHD.Rows[i].Cells[0].Value.ToString());
             Tien -= OldTien;
@@ -238,7 +243,7 @@ namespace BTL_QLCuaHangBanQuanAo.Views
 
         private void txtKhachtra_TextChanged(object sender, EventArgs e)
         {
-            txtTrakhach.Text = (float.Parse(txtKhachtra.Text) - float.Parse(txtTong.Text)).ToString();
+            txtTrakhach.Text = (double.Parse(txtKhachtra.Text) - double.Parse(txtTong.Text)).ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -248,17 +253,17 @@ namespace BTL_QLCuaHangBanQuanAo.Views
                 MessageBox.Show("Bạn chưa điền đủ thông tin");
                 return;
             }
-            if (float.Parse(txtTrakhach.Text) < 0)
+            if (double.Parse(txtTrakhach.Text) < 0)
             {
-                MessageBox.Show($"Khách cần trả thêm {Math.Abs(float.Parse(txtTrakhach.Text))} tiền");
+                MessageBox.Show($"Khách cần trả thêm {Math.Abs(double.Parse(txtTrakhach.Text))} tiền");
             }
-            else if (float.Parse(txtTrakhach.Text) > 0)
+            else if (double.Parse(txtTrakhach.Text) > 0)
             {
-                MessageBox.Show($"Cần trả cho khách {Math.Abs(float.Parse(txtTrakhach.Text))} tiền");
+                MessageBox.Show($"Cần trả cho khách {Math.Abs(double.Parse(txtTrakhach.Text))} tiền");
             }
             try
             {
-                string sql = $"INSERT INTO HoaDonBan VALUES('{txtMaHD.Text}','{Convert.ToDateTime(dtpTime.Text)}',{txtTong.Text},'{cboMaNV.Text}','{cboKhachhang.Text}')";
+                string sql = $"INSERT INTO HoaDonBan VALUES('{txtMaHD.Text}','{dtpTime.Value.ToString("yyyy-MM-dd")}',{txtTong.Text},'{cboMaNV.Text}','{cboKhachhang.Text}')";
                 data.ExecuteNonQuery(sql);
                 for (int i = 0; i < dgvLapHD.Rows.Count - 1; i++)
                 {
@@ -276,9 +281,20 @@ namespace BTL_QLCuaHangBanQuanAo.Views
             StartPr();
         }
 
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.cs
         private void btnExcel_Click(object sender, EventArgs e)
         {
             DataProvider.Instance.ExportFileExcel(dgvLapHD, "Danh Sách Bán Hàng");
+=======
+        private void btnThemnhom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvLapHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.cs
         }
     }
 }

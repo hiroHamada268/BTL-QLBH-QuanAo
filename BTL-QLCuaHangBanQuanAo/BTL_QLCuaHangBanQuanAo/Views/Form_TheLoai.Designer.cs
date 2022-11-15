@@ -124,9 +124,16 @@
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnLamMoi.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.add;
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnLamMoi.Location = new System.Drawing.Point(164, 136);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(99, 41);
+=======
+            this.btnLamMoi.Location = new System.Drawing.Point(218, 168);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(132, 50);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnLamMoi.TabIndex = 15;
             this.btnLamMoi.Text = "Làm Mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -170,9 +177,16 @@
             this.btnXoa.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnXoa.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.trash;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnXoa.Location = new System.Drawing.Point(36, 136);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(91, 41);
+=======
+            this.btnXoa.Location = new System.Drawing.Point(48, 168);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(121, 50);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -186,9 +200,16 @@
             this.btnSua.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnSua.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.pencil;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnSua.Location = new System.Drawing.Point(35, 93);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 41);
+=======
+            this.btnSua.Location = new System.Drawing.Point(47, 114);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(122, 50);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -201,9 +222,16 @@
             this.btnThem.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnThem.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.add;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnThem.Location = new System.Drawing.Point(35, 46);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 41);
+=======
+            this.btnThem.Location = new System.Drawing.Point(47, 56);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(122, 50);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -299,9 +327,16 @@
             this.btnTimKiem.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnTimKiem.Image = global::BTL_QLCuaHangBanQuanAo.Properties.Resources.search;
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnTimKiem.Location = new System.Drawing.Point(428, 25);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(102, 42);
+=======
+            this.btnTimKiem.Location = new System.Drawing.Point(570, 31);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(136, 52);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_TheLoai.Designer.cs
             this.btnTimKiem.TabIndex = 15;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -400,7 +435,7 @@
             this.Controls.Add(this.pnTitle);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_TheLoai";
-            this.Text = "Form_CongViec";
+            this.Text = "Form_TheLoai";
             this.Load += new System.EventHandler(this.Form_TheLoai_Load);
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();

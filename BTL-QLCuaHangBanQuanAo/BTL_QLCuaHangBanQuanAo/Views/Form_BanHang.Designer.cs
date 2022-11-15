@@ -70,24 +70,41 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnReport = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
+=======
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLapHD)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.statusStrip3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(54)))), ((int)(((byte)(86)))));
             pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             pictureBox2.Location = new System.Drawing.Point(-441, -181);
             pictureBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new System.Drawing.Size(232, 66);
+=======
+            pictureBox2.Location = new System.Drawing.Point(-588, -223);
+            pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new System.Drawing.Size(309, 82);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 184;
             pictureBox2.TabStop = false;
@@ -96,27 +113,48 @@
             // 
             this.cboKhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboKhachhang.FormattingEnabled = true;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboKhachhang.Location = new System.Drawing.Point(307, 109);
             this.cboKhachhang.Name = "cboKhachhang";
             this.cboKhachhang.Size = new System.Drawing.Size(211, 24);
+=======
+            this.cboKhachhang.Location = new System.Drawing.Point(410, 134);
+            this.cboKhachhang.Margin = new System.Windows.Forms.Padding(4);
+            this.cboKhachhang.Name = "cboKhachhang";
+            this.cboKhachhang.Size = new System.Drawing.Size(280, 28);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboKhachhang.TabIndex = 3;
             // 
             // txtMaHD
             // 
             this.txtMaHD.Enabled = false;
             this.txtMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtMaHD.Location = new System.Drawing.Point(16, 49);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(251, 23);
+=======
+            this.txtMaHD.Location = new System.Drawing.Point(21, 60);
+            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(333, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtMaHD.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label1.Location = new System.Drawing.Point(11, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 17);
+=======
+            this.label1.Location = new System.Drawing.Point(15, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label1.TabIndex = 159;
             this.label1.Text = "Mã hoá đơn";
             // 
@@ -124,9 +162,16 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.panel2.Location = new System.Drawing.Point(797, 419);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 1);
+=======
+            this.panel2.Location = new System.Drawing.Point(264, 509);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(267, 2);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.panel2.TabIndex = 204;
             // 
             // txtTong
@@ -134,9 +179,16 @@
             this.txtTong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTong.Enabled = false;
             this.txtTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTong.Location = new System.Drawing.Point(830, 358);
             this.txtTong.Name = "txtTong";
             this.txtTong.Size = new System.Drawing.Size(173, 16);
+=======
+            this.txtTong.Location = new System.Drawing.Point(308, 434);
+            this.txtTong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTong.Name = "txtTong";
+            this.txtTong.Size = new System.Drawing.Size(231, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTong.TabIndex = 203;
             this.txtTong.Text = "0";
             this.txtTong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -146,9 +198,16 @@
             this.txtTrakhach.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTrakhach.Enabled = false;
             this.txtTrakhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTrakhach.Location = new System.Drawing.Point(815, 473);
             this.txtTrakhach.Name = "txtTrakhach";
             this.txtTrakhach.Size = new System.Drawing.Size(173, 16);
+=======
+            this.txtTrakhach.Location = new System.Drawing.Point(288, 575);
+            this.txtTrakhach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTrakhach.Name = "txtTrakhach";
+            this.txtTrakhach.Size = new System.Drawing.Size(231, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTrakhach.TabIndex = 201;
             this.txtTrakhach.Text = "0";
             this.txtTrakhach.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -157,9 +216,16 @@
             // 
             this.txtKhachtra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtKhachtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtKhachtra.Location = new System.Drawing.Point(815, 434);
             this.txtKhachtra.Name = "txtKhachtra";
             this.txtKhachtra.Size = new System.Drawing.Size(173, 16);
+=======
+            this.txtKhachtra.Location = new System.Drawing.Point(288, 527);
+            this.txtKhachtra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhachtra.Name = "txtKhachtra";
+            this.txtKhachtra.Size = new System.Drawing.Size(231, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtKhachtra.TabIndex = 182;
             this.txtKhachtra.Text = "0";
             this.txtKhachtra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -171,10 +237,17 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.button1.Location = new System.Drawing.Point(611, 517);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 38);
+=======
+            this.button1.Location = new System.Drawing.Point(89, 643);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(320, 46);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.button1.TabIndex = 183;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = false;
@@ -184,9 +257,16 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label16.Location = new System.Drawing.Point(608, 474);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(138, 16);
+=======
+            this.label16.Location = new System.Drawing.Point(12, 577);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(171, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label16.TabIndex = 200;
             this.label16.Text = "Tiền thừa trả khách";
             // 
@@ -194,9 +274,16 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label15.Location = new System.Drawing.Point(608, 434);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(124, 16);
+=======
+            this.label15.Location = new System.Drawing.Point(12, 527);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(155, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label15.TabIndex = 199;
             this.label15.Text = "Khách thanh toán";
             // 
@@ -204,40 +291,72 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label8.Location = new System.Drawing.Point(623, 353);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 16);
+=======
+            this.label8.Location = new System.Drawing.Point(32, 427);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label8.TabIndex = 196;
             this.label8.Text = "Tổng tiền";
             // 
             // dgvLapHD
             // 
             this.dgvLapHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.dgvLapHD.Location = new System.Drawing.Point(10, 285);
             this.dgvLapHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLapHD.Name = "dgvLapHD";
             this.dgvLapHD.RowHeadersWidth = 62;
             this.dgvLapHD.RowTemplate.Height = 28;
             this.dgvLapHD.Size = new System.Drawing.Size(579, 298);
+=======
+            this.dgvLapHD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvLapHD.Location = new System.Drawing.Point(0, 0);
+            this.dgvLapHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvLapHD.Name = "dgvLapHD";
+            this.dgvLapHD.RowHeadersWidth = 62;
+            this.dgvLapHD.RowTemplate.Height = 28;
+            this.dgvLapHD.Size = new System.Drawing.Size(986, 629);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.dgvLapHD.TabIndex = 206;
+            this.dgvLapHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLapHD_CellContentClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label7.Location = new System.Drawing.Point(303, 83);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 17);
+=======
+            this.label7.Location = new System.Drawing.Point(404, 102);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label7.TabIndex = 162;
             this.label7.Text = "Khách hàng";
             // 
             // txtMathuoc
             // 
             this.txtMathuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtMathuoc.Location = new System.Drawing.Point(-257, 315);
             this.txtMathuoc.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtMathuoc.Name = "txtMathuoc";
             this.txtMathuoc.Size = new System.Drawing.Size(182, 23);
+=======
+            this.txtMathuoc.Location = new System.Drawing.Point(-342, 388);
+            this.txtMathuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMathuoc.Name = "txtMathuoc";
+            this.txtMathuoc.Size = new System.Drawing.Size(241, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtMathuoc.TabIndex = 205;
             this.txtMathuoc.Visible = false;
             // 
@@ -254,10 +373,19 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.groupBox1.Location = new System.Drawing.Point(9, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(596, 271);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(986, 319);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.groupBox1.TabIndex = 194;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -265,19 +393,33 @@
             // dtpTime
             // 
             this.dtpTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.dtpTime.Location = new System.Drawing.Point(15, 120);
             this.dtpTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpTime.Name = "dtpTime";
             this.dtpTime.Size = new System.Drawing.Size(252, 22);
+=======
+            this.dtpTime.Location = new System.Drawing.Point(20, 147);
+            this.dtpTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpTime.Name = "dtpTime";
+            this.dtpTime.Size = new System.Drawing.Size(335, 26);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.dtpTime.TabIndex = 168;
             // 
             // cboMaNV
             // 
             this.cboMaNV.FormattingEnabled = true;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboMaNV.Location = new System.Drawing.Point(15, 198);
             this.cboMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboMaNV.Name = "cboMaNV";
             this.cboMaNV.Size = new System.Drawing.Size(252, 24);
+=======
+            this.cboMaNV.Location = new System.Drawing.Point(20, 243);
+            this.cboMaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboMaNV.Name = "cboMaNV";
+            this.cboMaNV.Size = new System.Drawing.Size(335, 28);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboMaNV.TabIndex = 167;
             this.cboMaNV.SelectedIndexChanged += new System.EventHandler(this.cboMaNV_SelectedIndexChanged);
             // 
@@ -285,18 +427,32 @@
             // 
             this.txtTenNV.Enabled = false;
             this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTenNV.Location = new System.Drawing.Point(309, 190);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(251, 23);
+=======
+            this.txtTenNV.Location = new System.Drawing.Point(412, 234);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(333, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTenNV.TabIndex = 165;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label3.Location = new System.Drawing.Point(305, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 17);
+=======
+            this.label3.Location = new System.Drawing.Point(407, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label3.TabIndex = 166;
             this.label3.Text = "Tên Nhân Viên";
             // 
@@ -306,20 +462,35 @@
             this.btnThemnhom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemnhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemnhom.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnThemnhom.Location = new System.Drawing.Point(525, 109);
             this.btnThemnhom.Name = "btnThemnhom";
             this.btnThemnhom.Size = new System.Drawing.Size(34, 26);
+=======
+            this.btnThemnhom.Location = new System.Drawing.Point(700, 134);
+            this.btnThemnhom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemnhom.Name = "btnThemnhom";
+            this.btnThemnhom.Size = new System.Drawing.Size(45, 32);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnThemnhom.TabIndex = 155;
             this.btnThemnhom.Text = "+";
             this.btnThemnhom.UseVisualStyleBackColor = false;
+            this.btnThemnhom.Click += new System.EventHandler(this.btnThemnhom_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label4.Location = new System.Drawing.Point(11, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
+=======
+            this.label4.Location = new System.Drawing.Point(14, 202);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label4.TabIndex = 160;
             this.label4.Text = "Mã Nhân Viên";
             // 
@@ -327,9 +498,16 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label5.Location = new System.Drawing.Point(12, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 17);
+=======
+            this.label5.Location = new System.Drawing.Point(16, 101);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label5.TabIndex = 161;
             this.label5.Text = "Ngày bán";
             // 
@@ -338,7 +516,11 @@
             this.lblThoigian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoigian.ForeColor = System.Drawing.Color.White;
             this.lblThoigian.Name = "lblThoigian";
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.lblThoigian.Size = new System.Drawing.Size(77, 22);
+=======
+            this.lblThoigian.Size = new System.Drawing.Size(94, 28);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.lblThoigian.Text = "Thời gian";
             // 
             // lblTong
@@ -346,9 +528,16 @@
             this.lblTong.AutoSize = true;
             this.lblTong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTong.ForeColor = System.Drawing.Color.Red;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.lblTong.Location = new System.Drawing.Point(608, 623);
             this.lblTong.Name = "lblTong";
             this.lblTong.Size = new System.Drawing.Size(76, 16);
+=======
+            this.lblTong.Location = new System.Drawing.Point(811, 767);
+            this.lblTong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTong.Name = "lblTong";
+            this.lblTong.Size = new System.Drawing.Size(94, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.lblTong.TabIndex = 193;
             this.lblTong.Text = "Tổng số : ";
             // 
@@ -361,10 +550,17 @@
             this.statusStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblThoigian});
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.statusStrip3.Location = new System.Drawing.Point(1023, 743);
             this.statusStrip3.Name = "statusStrip3";
             this.statusStrip3.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.statusStrip3.Size = new System.Drawing.Size(228, 27);
+=======
+            this.statusStrip3.Location = new System.Drawing.Point(1364, 914);
+            this.statusStrip3.Name = "statusStrip3";
+            this.statusStrip3.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.statusStrip3.Size = new System.Drawing.Size(304, 34);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.statusStrip3.TabIndex = 187;
             this.statusStrip3.Text = "statusStrip3";
             // 
@@ -372,9 +568,16 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label13.Location = new System.Drawing.Point(37, 26);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(107, 17);
+=======
+            this.label13.Location = new System.Drawing.Point(49, 32);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label13.TabIndex = 151;
             this.label13.Text = "Mã Sản Phẩm";
             // 
@@ -382,18 +585,32 @@
             // 
             this.cboSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSP.FormattingEnabled = true;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboSP.Location = new System.Drawing.Point(37, 48);
             this.cboSP.Name = "cboSP";
             this.cboSP.Size = new System.Drawing.Size(342, 24);
+=======
+            this.cboSP.Location = new System.Drawing.Point(49, 59);
+            this.cboSP.Margin = new System.Windows.Forms.Padding(4);
+            this.cboSP.Name = "cboSP";
+            this.cboSP.Size = new System.Drawing.Size(455, 28);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.cboSP.TabIndex = 0;
             this.cboSP.SelectedIndexChanged += new System.EventHandler(this.cboSP_SelectedIndexChanged);
             // 
             // txtSoluong
             // 
             this.txtSoluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtSoluong.Location = new System.Drawing.Point(41, 176);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.Size = new System.Drawing.Size(157, 23);
+=======
+            this.txtSoluong.Location = new System.Drawing.Point(55, 216);
+            this.txtSoluong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoluong.Name = "txtSoluong";
+            this.txtSoluong.Size = new System.Drawing.Size(208, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtSoluong.TabIndex = 4;
             this.txtSoluong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
@@ -402,9 +619,16 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label10.Location = new System.Drawing.Point(37, 154);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 17);
+=======
+            this.label10.Location = new System.Drawing.Point(50, 190);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label10.TabIndex = 166;
             this.label10.Text = "Số lượng";
             // 
@@ -412,9 +636,16 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label11.Location = new System.Drawing.Point(223, 153);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 17);
+=======
+            this.label11.Location = new System.Drawing.Point(298, 188);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label11.TabIndex = 170;
             this.label11.Text = "Đơn giá";
             // 
@@ -422,9 +653,16 @@
             // 
             this.txtDongia.Enabled = false;
             this.txtDongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtDongia.Location = new System.Drawing.Point(225, 174);
             this.txtDongia.Name = "txtDongia";
             this.txtDongia.Size = new System.Drawing.Size(157, 23);
+=======
+            this.txtDongia.Location = new System.Drawing.Point(300, 214);
+            this.txtDongia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDongia.Name = "txtDongia";
+            this.txtDongia.Size = new System.Drawing.Size(208, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtDongia.TabIndex = 2;
             this.txtDongia.Text = "0";
             this.txtDongia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -436,10 +674,17 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnThem.Location = new System.Drawing.Point(56, 264);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(101, 38);
+=======
+            this.btnThem.Location = new System.Drawing.Point(75, 325);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(135, 46);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -451,10 +696,17 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnXoa.Location = new System.Drawing.Point(276, 264);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(101, 38);
+=======
+            this.btnXoa.Location = new System.Drawing.Point(368, 325);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(135, 46);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -477,9 +729,17 @@
             this.groupBox2.Controls.Add(this.cboSP);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.groupBox2.Location = new System.Drawing.Point(611, 9);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(415, 309);
+=======
+            this.groupBox2.Location = new System.Drawing.Point(16, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(553, 380);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.groupBox2.TabIndex = 195;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
@@ -489,9 +749,16 @@
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThanhTien.Enabled = false;
             this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtThanhTien.Location = new System.Drawing.Point(186, 235);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(173, 16);
+=======
+            this.txtThanhTien.Location = new System.Drawing.Point(248, 290);
+            this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(231, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtThanhTien.TabIndex = 206;
             this.txtThanhTien.Text = "0";
             this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -500,9 +767,16 @@
             // 
             this.txtGiamgia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGiamgia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtGiamgia.Location = new System.Drawing.Point(186, 203);
             this.txtGiamgia.Name = "txtGiamgia";
             this.txtGiamgia.Size = new System.Drawing.Size(173, 16);
+=======
+            this.txtGiamgia.Location = new System.Drawing.Point(248, 250);
+            this.txtGiamgia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiamgia.Name = "txtGiamgia";
+            this.txtGiamgia.Size = new System.Drawing.Size(231, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtGiamgia.TabIndex = 203;
             this.txtGiamgia.Text = "0";
             this.txtGiamgia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -513,9 +787,16 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label14.Location = new System.Drawing.Point(12, 235);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(79, 16);
+=======
+            this.label14.Location = new System.Drawing.Point(16, 289);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label14.TabIndex = 205;
             this.label14.Text = "Thành tiền";
             // 
@@ -523,9 +804,16 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label9.Location = new System.Drawing.Point(12, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(69, 16);
+=======
+            this.label9.Location = new System.Drawing.Point(16, 249);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 20);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label9.TabIndex = 204;
             this.label9.Text = "Giảm giá";
             // 
@@ -533,9 +821,16 @@
             // 
             this.txtTenSP.Enabled = false;
             this.txtTenSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTenSP.Location = new System.Drawing.Point(37, 114);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(342, 23);
+=======
+            this.txtTenSP.Location = new System.Drawing.Point(49, 141);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(455, 27);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.txtTenSP.TabIndex = 172;
             this.txtTenSP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -543,6 +838,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.label6.Location = new System.Drawing.Point(38, 82);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 17);
@@ -595,11 +891,77 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvLapHD);
+=======
+            this.label6.Location = new System.Drawing.Point(51, 101);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 20);
+            this.label6.TabIndex = 171;
+            this.label6.Text = "Tên Sản Phẩm";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(986, 948);
+            this.panel1.TabIndex = 207;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.splitter1.Location = new System.Drawing.Point(986, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(10, 948);
+            this.splitter1.TabIndex = 208;
+            this.splitter1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.txtTong);
+            this.panel3.Controls.Add(this.txtKhachtra);
+            this.panel3.Controls.Add(this.txtTrakhach);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(996, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(672, 948);
+            this.panel3.TabIndex = 169;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dgvLapHD);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 319);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(986, 629);
+            this.panel4.TabIndex = 207;
+            // 
+            // Form_BanHang
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1369, 780);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.panel1);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.Controls.Add(this.txtMathuoc);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTong);
             this.Controls.Add(pictureBox2);
             this.Controls.Add(this.statusStrip3);
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
             this.Name = "Form_BanHang";
             this.Text = "Form_BanHang";
             this.Load += new System.EventHandler(this.Form_BanHang_Load);
@@ -611,6 +973,10 @@
             this.statusStrip3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,7 +1024,14 @@
         private System.Windows.Forms.TextBox txtGiamgia;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
+<<<<<<< HEAD:BTL-QLCuaHangBanQuanAo/BTL_QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnExcel;
+=======
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+>>>>>>> origin/tai:BTL-QLCuaHangBanQuanAo/BTL-QLCuaHangBanQuanAo/Views/Form_BanHang.Designer.cs
     }
 }
